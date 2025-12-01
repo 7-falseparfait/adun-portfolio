@@ -12,6 +12,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import NavLinks from "./ui/NavLinks";
 
 const Header = () => {
   const navLinks = [
@@ -31,22 +32,7 @@ const Header = () => {
         </Link>
 
         <div className="hidden md:block">
-          <NavigationMenu>
-            <NavigationMenuList>
-              {navLinks.map((link, i) => (
-                <NavigationMenuItem key={i}>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      href={link.href}
-                      className={`${navigationMenuTriggerStyle()} font-inter text-base font-normal tracking-normal bg-transparent text-[#B3B3B3] hover:bg-transparent hover:!text-[#B3B3B3] hover:underline underline-offset-4 focus:bg-transparent focus:text-[#B3B3B3]`}
-                    >
-                      {link.name}
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+          <NavLinks />
         </div>
         <Button className="rounded-2xl cursor-pointer bg-white text-black hover:bg-neutral-200">
           Hire Me

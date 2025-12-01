@@ -1,3 +1,4 @@
+import { Button } from "./ui/button";
 import VideoCard from "./VideoCard";
 import VideoPlaceholder from "./VideoPlaceholder";
 
@@ -46,6 +47,11 @@ const SelectedWork = () => {
             />
           ))}
         </div>
+      </div>
+      <div className="place-self-center mt-9">
+        <Button className="rounded-3xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-6 px-9">
+          View all work
+        </Button>
       </div>
     </section>
   );
