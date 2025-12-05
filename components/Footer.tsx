@@ -6,8 +6,8 @@ import NavLinks from "./ui/NavLinks";
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-20 bg-background">
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8">
-        <div className="w-full h-[600px] bg-[url('/footer.webp')] bg-cover bg-center relative rounded-2xl overflow-hidden">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-26">
+        <div className="w-full h-[600px] bg-[url('/footer.webp')] bg-cover bg-center relative rounded-[48px] overflow-hidden">
           <div className="relative z-10 h-full flex flex-col justify-between items-center p-8">
             <div></div>
 

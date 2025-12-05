@@ -36,7 +36,7 @@ const workHistory = [
 export default function AboutPage() {
   return (
     <main className="w-full bg-background min-h-screen pt-24 pb-24">
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-26">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-white/10 mb-16 overflow-hidden">
           <Image
             width={300}

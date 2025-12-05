@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header className="w-full border-b border-white/10 bg-[#030303]">
-      <div className="flex justify-between items-center w-full max-w-[1440px] mx-auto px-4 md:px-8 h-16">
+      <div className="flex justify-between items-center w-full max-w-[1440px] mx-auto px-4 md:px-26 h-16">
         <Link href="/">
           <Avatar>
             <AvatarImage src="/Avatar.jpg" alt="Logo" />

@@ -9,12 +9,12 @@ const ServiceCard = ({
   description: string;
 }) => {
   return (
-    <div className="relative bg-neutral-900/50 rounded-2xl overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-300 group">
+    <div className="relative md:h-[400px] bg-neutral-900/50 rounded-4xl overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-300 group">
       <div className=" opacity-30 pointer-events-none">
         <img src="/Dots.png" alt="" className="w-full h-full object-cover" />
       </div>
 
-      <div className="relative z-10 p-6 md:p-8">
+      <div className="relative z-10 p-6 md:px-[24px] md:py-2">
         <div className="text-muted-foreground text-sm font-inter mb-4 group-hover:text-foreground transition-colors">
           {number}
         </div>
@@ -23,7 +23,7 @@ const ServiceCard = ({
           {title}
         </h3>
 
-        <p className="text-muted-foreground text-sm md:text-base font-inter leading-relaxed">
+        <p className="text-sm md:text-base font-inter leading-relaxed text-[#B3B3B3]">
           {description}
         </p>
       </div>
@@ -58,15 +58,8 @@ const Services = () => {
 
   return (
     <section className="w-full py-2 bg-background">
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8">
+      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-26">
         <div className="flex flex-col items-center ">
-          <Image
-            width={120}
-            height={120}
-            src="/Dots.png"
-            alt="dots"
-            className="mb-6"
-          />
           <h2 className="text-foreground text-[56px] leading-[72px] mb-6 tracking-[-0.015em] font-[family-name:var(--font-crimson)] font-normal text-center">
             Services
           </h2>

@@ -3,7 +3,6 @@ import VideoCard from "./VideoCard";
 import VideoPlaceholder from "./VideoPlaceholder";
 
 const SelectedWork = () => {
-  // Placeholder projects - easy to replace with real data later
   const projects = [
     {
       id: 1,
@@ -33,12 +32,12 @@ const SelectedWork = () => {
 
   return (
     <section className="w-full py-20 bg-background">
-      <div className="w-full max-w-[1440px] mx-auto px-4 md:px-8">
+      <div className="w-full max-w-[1440px] mx-auto px-4  md:px-26">
         <h2 className="text-foreground text-[56px] leading-[72px] tracking-[-0.015em] font-[family-name:var(--font-crimson)] font-normal mb-12">
           Selected Work
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10">
           {projects.map((project) => (
             <VideoCard
               key={project.id}

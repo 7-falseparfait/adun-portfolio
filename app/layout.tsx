@@ -10,11 +10,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const crimsonPro = Crimson_Pro({
-  subsets: ["latin"],
-  variable: "--font-crimson",
-  display: "swap",
-});
+// const crimsonPro = Crimson_Pro({
+//   subsets: ["latin"],
+//   variable: "--font-crimson",
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "Adun-Portfolio",
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${crimsonPro.variable} ${inter.variable} antialiased`}>
+      <body className={`S ${inter.variable} antialiased`}>
         <Header />
         {children}
         <Footer />

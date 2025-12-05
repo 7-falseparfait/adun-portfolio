@@ -7,7 +7,6 @@ const Gallery = () => {
         Gallery & Fun projects
       </h2>
       <div className="border border-white/10 overflow-hidden">
-        {/* First Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
           <Image
             width={300}
