@@ -57,7 +57,6 @@ const VideoCard = ({
         </div>
       </div>
 
-      {/* Text Section */}
       <div className="w-full px-6 py-4 md:p-8 flex flex-col gap-1 md:gap-2 bg-[#050505] h-[98px] md:h-[106px] justify-center overflow-hidden">
         {tag && (
           <span className="font-[family-name:var(--font-switzer)] text-[10px] md:text-[12px] font-semibold leading-[14px] md:leading-[18px] tracking-[2px] uppercase text-[#FFFFFF]">
