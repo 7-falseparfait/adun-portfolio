@@ -5,10 +5,18 @@ import SectionHeading from "./ui/SectionHeading";
 import Image from "next/image";
 import { Button } from "./ui/button";
 
-// --- INLINE SERVICE TAG COMPONENT (for styling control) ---
+// --- UPDATED SERVICE TAG (Matches your exact Font Specs) ---
 const ServiceTag = ({ label }: { label: string }) => (
-  <div className="border border-white/20 rounded-full px-4 py-1.5 backdrop-blur-sm">
-    <span className="font-[family-name:var(--font-switzer)] text-[12px] font-normal leading-[18px] tracking-[-0.005em] text-white whitespace-nowrap">
+  <div className="flex items-center gap-2 border border-white/15 rounded-full px-4 h-[34px] bg-transparent backdrop-blur-sm">
+    {/* The Dot */}
+    <div className="w-1.5 h-1.5 rounded-full bg-white shrink-0" />
+
+    {/* The Text 
+        - Size: 14px 
+        - Line-height: 20px 
+        - Letter-spacing: -0.5% (-0.005em)
+    */}
+    <span className="font-[family-name:var(--font-switzer)] text-[14px] font-normal leading-[20px] tracking-[-0.005em] text-white whitespace-nowrap pt-[1px]">
       {label}
     </span>
   </div>
