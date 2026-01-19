@@ -5,6 +5,21 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  /* Define the animation utility */
+  --animate-scroll: scroll 20s linear infinite;
+
+  /* Define the keyframes */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
 :root {
   --radius: 0.625rem;
   --foreground: oklch(1 0 0);

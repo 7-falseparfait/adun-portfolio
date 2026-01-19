@@ -1,48 +1,50 @@
 import Container from "./Container";
 import { Button } from "./ui/button";
+import SectionHeading from "./ui/SectionHeading";
+import SectionLabel from "./ui/SectionLabel";
+import WorkFilters from "./ui/WorkFilters";
 import VideoCard from "./VideoCard";
-import VideoPlaceholder from "./VideoPlaceholder";
 
 const SelectedWork = () => {
   const projects = [
     {
       id: 1,
       title: "Project One",
-      description:
-        "Project explanation hyjoshyjoahyjos hyjios hyjioshy joahyjos",
+      description: "Project explanation...",
+      tag: "Talking Head",
     },
     {
       id: 2,
       title: "Project One",
-      description: "Project explanation hyjoshyjoahyjos hyjios hyjioshy",
+      description: "Project explanation...",
+      tag: "Social Media Edit",
     },
     {
       id: 3,
       title: "Project One",
-      description:
-        "Project explanation hyjoshyjoahyjos hyjios hyjioshy joahyjos",
+      description: "Project explanation...",
+      tag: "Event & Lifestyle",
     },
     {
       id: 4,
       title: "Project One",
-      description:
-        "Project explanation hyjoshyjoahyjos hyjios hyjioshy joahyjos",
+      description: "Project explanation...",
+      tag: "Brand & Business",
     },
   ];
 
   return (
     <section className="w-full py-15 bg-background">
       <Container>
-        <h2 className="text-foreground text-[32px] md:text-[56px] leading-[38px] md:leading-[72px] tracking-[-0.015em] font-[family-name:var(--font-crimson)] font-normal mb-12">
-          Selected Work
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+        <SectionLabel className="flex items-center justify-center" />
+        <SectionHeading className="md:max-w-[450px] mt-3" />
+        <WorkFilters />
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-22 gap-y-10 md:mt-6">
           {projects.map((project) => (
             <VideoCard
               key={project.id}
               title={project.title}
-              description={project.description}
+              tag={project.tag}
             />
           ))}
         </div>

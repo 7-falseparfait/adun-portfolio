@@ -1,118 +1,74 @@
+import React from "react";
 import { Play } from "lucide-react";
+
+interface VideoCardProps {
+  title: string;
+  tag?: string;
+  imageSrc?: string;
+}
 
 const VideoCard = ({
   title,
-  description,
-}: {
-  title: string;
-  description: string;
-}) => {
+  tag,
+  imageSrc = "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop",
+}: VideoCardProps) => {
   return (
-    <div className="group cursor-pointer w-full max-w-[604px]">
-      <div className="relative w-full h-[359px] md:h-[560px] rounded-[48px] overflow-hidden mb-6 border border-white/5 md:border-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-neutral-800 via-neutral-900 to-black">
-          <div
-            className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-          />
-        </div>
+    <div
+      // This inline style (mask-image) is the "Nuclear Fix" for the border-radius bug on Safari/Chrome
+      style={{ WebkitMaskImage: "-webkit-radial-gradient(white, black)" }}
+      className="
+      group 
+      flex flex-col 
+      w-full 
+      
+      /* --- Dimensions --- */
+      max-w-[400px] md:max-w-[604px]
+      h-[408px] md:h-[572px]
+      rounded-[24px] md:rounded-[32px]
+      
+      overflow-hidden 
+      cursor-pointer 
+      bg-[#050505] 
+      
+      /* --- Borders --- */
+      border-b-[0.5px] border-l-[0.5px] border-r-[0.5px] border-t-0
+      border-white/15 
+      
+      /* --- Fix: Hardware Acceleration to prevent clipping flicker --- */
+      transform-gpu
+    "
+    >
+      {/* Image Section */}
+      <div className="relative w-full h-[310px] md:h-auto md:flex-1 overflow-hidden">
+        <img
+          src={imageSrc}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 will-change-transform"
+        />
+
+        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-300" />
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-10 h-10 md:w-16 md:h-16 rounded-full group-hover:scale-110 transition-transform duration-500 shadow-[0_6px_6px_rgba(0,0,0,0.2),0_0_20px_rgba(0,0,0,0.1)]">
-            <div
-              className="absolute inset-0 rounded-full"
-              style={{
-                zIndex: 0,
-                backdropFilter: "blur(3px)",
-                filter: "url(#glass-distortion)",
-                overflow: "hidden",
-              }}
-            />
-
-            <div
-              className="absolute inset-0 rounded-full bg-white/20"
-              style={{ zIndex: 1 }}
-            />
-
-            <div
-              className="absolute inset-0 rounded-full"
-              style={{
-                zIndex: 2,
-                boxShadow:
-                  "inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5), inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5)",
-              }}
-            />
-
-            <div className="relative z-[3] w-full h-full flex items-center justify-center">
-              <Play className="w-5 h-5 md:w-8 md:h-8 text-white fill-white ml-0.5 md:ml-1 drop-shadow-[0_0_3px_rgba(255,255,255,0.25)] transition-transform duration-200 active:scale-95" />
-            </div>
+          {/* FIX: Added 'shrink-0' here so it never squashes into an oval.
+           */}
+          <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border border-white/30 flex items-center justify-center bg-white/10 backdrop-blur-[2px] transition-transform duration-300 group-hover:scale-110 group-active:scale-95">
+            <Play className="w-6 h-6 md:w-8 md:h-8 text-white fill-white ml-1" />
           </div>
         </div>
-
-        <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300" />
       </div>
 
-      <div className="space-y-2">
-        <h3 className="text-foreground text-2xl md:text-3xl font-[family-name:var(--font-crimson)] font-normal">
+      {/* Text Section */}
+      <div className="w-full px-6 py-4 md:p-8 flex flex-col gap-1 md:gap-2 bg-[#050505] h-[98px] md:h-[106px] justify-center overflow-hidden">
+        {tag && (
+          <span className="font-[family-name:var(--font-switzer)] text-[10px] md:text-[12px] font-semibold leading-[14px] md:leading-[18px] tracking-[2px] uppercase text-[#FFFFFF]">
+            {tag}
+          </span>
+        )}
+
+        <h3 className="font-['Crimson_Pro'] text-[24px] md:text-[32px] leading-tight text-white font-normal">
           {title}
         </h3>
-        <p className="text-[#B3B3B3] text-sm md:text-base font-[family-name:var(--font-switzer)]">
-          {description}
-        </p>
       </div>
-
-      <svg style={{ display: "none" }}>
-        <filter
-          id="glass-distortion"
-          x="0%"
-          y="0%"
-          width="100%"
-          height="100%"
-          filterUnits="objectBoundingBox"
-        >
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="0.01 0.01"
-            numOctaves="1"
-            seed="5"
-            result="turbulence"
-          />
-          <feComponentTransfer in="turbulence" result="mapped">
-            <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
-            <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
-            <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
-          </feComponentTransfer>
-          <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
-          <feSpecularLighting
-            in="softMap"
-            surfaceScale="5"
-            specularConstant="1"
-            specularExponent="100"
-            lightingColor="white"
-            result="specLight"
-          >
-            <fePointLight x="-200" y="-200" z="300" />
-          </feSpecularLighting>
-          <feComposite
-            in="specLight"
-            operator="arithmetic"
-            k1="0"
-            k2="1"
-            k3="1"
-            k4="0"
-            result="litImage"
-          />
-          <feDisplacementMap
-            in="SourceGraphic"
-            in2="softMap"
-            scale="40"
-            xChannelSelector="R"
-            yChannelSelector="G"
-          />
-        </filter>
-      </svg>
     </div>
   );
 };

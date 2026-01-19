@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+import Aboutme from "@/components/Aboutme";
 import Hero from "@/components/Hero";
 import PastProjects from "@/components/PastProjects";
 import SelectedWork from "@/components/SelectedWork";
@@ -10,6 +10,7 @@ export default function Home() {
       <Hero />
       <SelectedWork />
       <Services />
+      <Aboutme />
       <PastProjects />
     </>
   );

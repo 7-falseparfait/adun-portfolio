@@ -80,7 +80,7 @@ export default function AboutPage() {
             <p>
               Previously, I worked as a senior video editor at VisionCraft
               Media, where I led post-production for campaigns viewed by
-              millions. On the side, I'm building CutLab, a tool that helps
+              millions. On the side, I&apos;m building CutLab, a tool that helps
               editors and creative teams streamline their editing workflow and
               collaborate with more clarity. Before CutLab, I cofounded
               ReelSync, a lightweight web app that lets creators organize their
@@ -93,16 +93,16 @@ export default function AboutPage() {
               color, pacing, and sound design across long-form and short-form
               content. In 2024, I worked on the early edit direction for
               FocusFlow (Alpha) at Collective Studios in London, helping define
-              the video aesthetic and story arc for the product's launch.
+              the video aesthetic and story arc for the product&apos;s launch.
               FocusFlow was later re-edited to create a more distilled,
               cinematic experience that helped users feel immersed and
               motivated.
             </p>{" "}
             As a storyteller with a deep love for pacing, emotion, and rhythm, I
             enjoy bringing ideas to life with other creative people. And when
-            I'm not editing, refining cuts, building tools, or directing
-            post-production workflows, you'll probably find me watching YouTube
-            videos about filmmaking, design, color theory, and creative
+            I&apos;m not editing, refining cuts, building tools, or directing
+            post-production workflows, you&apos;ll probably find me watching
+            YouTube videos about filmmaking, design, color theory, and creative
             excellence.
           </p>
           <div className="flex justify-between">
