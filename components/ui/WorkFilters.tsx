@@ -12,7 +12,7 @@ const defaultTags = [
   "Social Media Edit",
   "Event & Lifestyle",
   "Brand & Business",
-  "Narrative & Creative", // Fixed typo (was Narative)
+  "Narrative & Creative",
 ];
 
 const WorkFilters = ({ tags = defaultTags, onChange }: WorkFiltersProps) => {
@@ -24,7 +24,7 @@ const WorkFilters = ({ tags = defaultTags, onChange }: WorkFiltersProps) => {
         flex flex-wrap 
         justify-center  
         gap-3 
-        w-full max-w-[600px] /* Constraints prevent it from getting too wide on tablet */
+        w-full max-w-[900px] /* Constraints prevent it from getting too wide on tablet */
         mx-auto my-5 
         md:mt-4 md:mb-5
       "

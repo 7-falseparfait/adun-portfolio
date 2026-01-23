@@ -25,9 +25,11 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button className="rounded-4xl cursor-pointer md:py-[22px] bg-white text-black hover:bg-neutral-200 text-sm md:text-base px-4 md:px-8">
-            Hire Me
-          </Button>
+          <Link href="mailto:Ainamuyiwa18@gmail.com">
+            <Button className="rounded-4xl cursor-pointer md:py-[22px] bg-white text-black hover:bg-neutral-200 text-sm md:text-base px-4 md:px-8">
+              Hire Me
+            </Button>
+          </Link>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -35,19 +37,16 @@ const Header = () => {
             aria-label="Toggle menu"
           >
             <span
-              className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-              }`}
+              className={`w-full h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                }`}
             />
             <span
-              className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                mobileMenuOpen ? "opacity-0" : ""
-              }`}
+              className={`w-full h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""
+                }`}
             />
             <span
-              className={`w-full h-0.5 bg-white transition-all duration-300 ${
-                mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-              }`}
+              className={`w-full h-0.5 bg-white transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                }`}
             />
           </button>
         </div>

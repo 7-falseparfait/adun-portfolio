@@ -78,10 +78,9 @@ const ClientShowcase = () => {
                 className={`
                   px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
                   border border-transparent
-                  ${
-                    isActive
-                      ? "bg-white text-black" // Active Style (White Pill)
-                      : "bg-[#111111] text-[#B3B3B3] border-[#333] hover:border-white/40" // Inactive Style
+                  ${isActive
+                    ? "bg-white text-black" // Active Style (White Pill)
+                    : "bg-[#111111] text-[#B3B3B3] border-[#333] hover:border-white/40" // Inactive Style
                   }
                 `}
               >

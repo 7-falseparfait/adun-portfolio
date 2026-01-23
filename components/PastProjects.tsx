@@ -10,24 +10,13 @@ import SectionHeading from "./ui/SectionHeading";
 const projects = [
   {
     id: 1,
-    clientName: "Netflix",
-    description:
-      "For Netflix, I produced and directed promotional content for their African originals, focusing on vibrant storytelling.",
-    media: [
-      { id: 1, image: "/netflix-img.png", alt: "Netflix Project 1" },
-      { id: 2, image: "/netflix-2.avif", alt: "Netflix Project 2" },
-      { id: 3, image: "/netflix-3.avif", alt: "Netflix Project 3" },
-    ],
-  },
-  {
-    id: 2,
     clientName: "BET Africa",
     description:
       "Produced and directed 40+ episodes of Bet Streetz, a vibrant lifestyle series exploring African cities.",
     media: [{ id: 1, image: "/BET.jpg", alt: "BET Africa Project 1" }],
   },
   {
-    id: 3,
+    id: 2,
     clientName: "MTV Base",
     description:
       "Directed high-energy music campaigns and lifestyle content for the youth demographic.",
@@ -64,12 +53,12 @@ const PastProjects = () => {
   const hasMultiple = activeCategory.media.length > 1;
 
   return (
-    <section className="w-full py-20 bg-background">
+    <section id="showreel" className="w-full py-20 bg-background">
       <Container>
         {/* Header */}
         <SectionLabel
           className="flex items-center justify-center"
-          text="Selected Works"
+          text="Showreel"
         />
         <SectionHeading
           text="A selection of my best work across different brands and campaigns."
@@ -87,10 +76,9 @@ const PastProjects = () => {
                 className={`
                   px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
                   border cursor-pointer
-                  ${
-                    isActive
-                      ? "bg-white text-black border-transparent"
-                      : "bg-[#111111] text-[#B3B3B3] border-[#333] hover:border-white/40"
+                  ${isActive
+                    ? "bg-white text-black border-transparent"
+                    : "bg-[#111111] text-[#B3B3B3] border-[#333] hover:border-white/40"
                   }
                 `}
               >
@@ -143,15 +131,15 @@ const PastProjects = () => {
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-6 md:left-12 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#222] border border-[#333] flex items-center justify-center text-white hover:bg-white hover:text-black transition-all cursor-pointer z-20"
+                  className="absolute left-2 md:left-12 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#222] border border-[#333] flex items-center justify-center text-white hover:bg-white hover:text-black transition-all cursor-pointer z-20"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-6 md:right-12 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#222] border border-[#333] flex items-center justify-center text-white hover:bg-white hover:text-black transition-all cursor-pointer z-20"
+                  className="absolute right-2 md:right-12 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#222] border border-[#333] flex items-center justify-center text-white hover:bg-white hover:text-black transition-all cursor-pointer z-20"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
                 <div className="absolute bottom-8 text-[#666] font-switzer text-xs tracking-widest">
                   {currentIndex + 1} / {activeCategory.media.length}

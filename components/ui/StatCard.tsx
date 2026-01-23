@@ -1,5 +1,6 @@
 "use client"; // Required for animation hooks
 
+import React from "react";
 import CountUp from "react-countup";
 
 interface StatCardProps {
@@ -8,6 +9,12 @@ interface StatCardProps {
 }
 
 const StatCard = ({ number, label }: StatCardProps) => {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // 1. Helper to separate numbers from text (e.g., "40M+" -> value: 40, suffix: "M+")
   const parseNumber = (str: string) => {
     const match = str.match(/(\d+)(.*)/); // Regex to find digits first, then the rest
@@ -50,14 +57,20 @@ const StatCard = ({ number, label }: StatCardProps) => {
         md:text-[80px] md:leading-20 md:tracking-[-0.02em]
       "
       >
-        <CountUp
-          start={0}
-          end={val}
-          duration={2.5}
-          suffix={suffix}
-          enableScrollSpy
-          scrollSpyOnce
-        />
+        {mounted ? (
+          <CountUp
+            start={0}
+            end={val}
+            duration={2.5}
+            suffix={suffix}
+            enableScrollSpy
+            scrollSpyOnce
+          >
+            {({ countUpRef }) => <span ref={countUpRef} />}
+          </CountUp>
+        ) : (
+          <span>{number}</span>
+        )}
       </span>
 
       <span

@@ -53,7 +53,7 @@ const SelectedWork = () => {
   ];
 
   return (
-    <section className="w-full py-15 bg-background">
+    <section id="work" className="w-full py-15 bg-background">
       <Container>
         <SectionLabel className="flex items-center justify-center" />
         <SectionHeading className="md:max-w-[450px] mt-3" />
@@ -61,7 +61,6 @@ const SelectedWork = () => {
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-22 gap-y-10 md:mt-6">
           {projects.map((project) => (
-            // The Wrapper Div handles the click to open the Modal
             <div
               key={project.id}
               onClick={() => setSelectedVideoId(project.youtubeId)}

@@ -3,6 +3,7 @@ import Container from "./Container";
 import SectionLabel from "./ui/SectionLabel";
 import SectionHeading from "./ui/SectionHeading";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 // --- UPDATED SERVICE TAG (Matches your exact Font Specs) ---
@@ -187,12 +188,14 @@ const Services = () => {
           ))}
         </div>
         <div className="mt-8 md:mt-12 flex justify-center">
-          <Button
-            variant="default"
-            className="!bg-white !text-black hover:!bg-neutral-200 !rounded-full px-8 py-6 md:w-[155px] md:h-[64px] md:px-12 md:py-5 text-sm md:text-base font-medium"
-          >
-            Hire Me
-          </Button>
+          <Link href="mailto:Ainamuyiwa18@gmail.com">
+            <Button
+              variant="default"
+              className="!bg-white !text-black hover:!bg-neutral-200 !rounded-full px-8 py-6 md:w-[155px] md:h-[64px] md:px-12 md:py-5 text-sm md:text-base font-medium"
+            >
+              Hire Me
+            </Button>
+          </Link>
         </div>
       </Container>
     </section>

@@ -3,34 +3,17 @@ import Image from "next/image";
 import SocialLinks from "@/components/SocialLinks";
 import Gallery from "@/components/Gallery";
 import Container from "@/components/Container";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 const workHistory = [
   {
     id: 1,
-    logo: "/work-logo.png",
-    role: "Senior Video Editor",
-    company: "CutLab",
-    period: "2024 - PRESENT",
+    logo: "/worklogo.png",
+    role: "VIDEO EDITOR & CREATIVE PRODUCER",
+    company: "DAT Creative International",
+    period: "2022 - 2025",
     description:
-      "Previously, I worked as a senior video editor at VisionCraft Media, where I led post-production for campaigns viewed by millions. On the side, I'm building CutLab, a tool that helps editors and creative teams streamline their editing workflow and collaborate with more clarity.",
-  },
-  {
-    id: 2,
-    logo: "/work-logo.png",
-    role: "Senior Video Editor",
-    company: "CutLab",
-    period: "2024 - PRESENT",
-    description:
-      "Previously, I worked as a senior video editor at VisionCraft Media, where I led post-production for campaigns viewed by millions. On the side, I'm building CutLab, a tool that helps editors and creative teams streamline their editing workflow and collaborate with more clarity.",
-  },
-  {
-    id: 3,
-    logo: "/work-logo.png",
-    role: "Senior Video Editor",
-    company: "CutLab",
-    period: "2024 - PRESENT",
-    description:
-      "Previously, I worked as a senior video editor at VisionCraft Media, where I led post-production for campaigns viewed by millions. On the side, I'm building CutLab, a tool that helps editors and creative teams streamline their editing workflow and collaborate with more clarity.",
+      "Edited a wide range of television and digital content for platforms including MTV Base West Africa, BET Africa, and major FMCG brands. Collaborated closely with directors and creative teams to shape compelling visual narratives, refine pacing, enhance performances, and deliver polished edits aligned with each project’s creative goals.\n\nIn addition to editing, supported concept development, content strategy, and overall production execution, ensuring a smooth workflow from pre-production to final delivery."
   },
 ];
 
@@ -38,73 +21,24 @@ export default function AboutPage() {
   return (
     <main className="w-full bg-background min-h-screen pt-24 pb-24">
       <Container>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-white/10 mb-16 overflow-hidden">
-          <Image
-            width={300}
-            height={464}
-            src="/1.jpg"
-            alt="image-1"
-            className="object-cover w-full h-full"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/2.jpg"
-            alt="image-2"
-            className="object-cover w-full h-full"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/3.jpg"
-            alt="image-3"
-            className="object-cover w-full h-full hidden md:block"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/4.jpg"
-            alt="image-4"
-            className="object-cover w-full h-full hidden md:block"
-          />
-        </div>
+        <PhotoCarousel />
 
         <div className="mb-20">
           <h1 className="font-[family-name:var(--font-crimson)] font-normal text-[32px] md:text-[64px] md:leading-[88px] leading-[48px] tracking-[-0.015em] text-left text-foreground mb-6">
             About Me
           </h1>
-          <p className="font-[family-name:var(--font-switzer)] font-normal text-xl md:leading-14 leading-10 tracking-[-0.015em] text-[#B3B3B3] mb-8 max-w-full">
-            Currently, I work as a video editor at FrameForge Studios, where I
-            help brands, creators, and startups craft stories that feel sharp,
-            intentional, and unforgettable.
-            <p>
-              Previously, I worked as a senior video editor at VisionCraft
-              Media, where I led post-production for campaigns viewed by
-              millions. On the side, I&apos;m building CutLab, a tool that helps
-              editors and creative teams streamline their editing workflow and
-              collaborate with more clarity. Before CutLab, I cofounded
-              ReelSync, a lightweight web app that lets creators organize their
-              footage, share selects, and get timestamped feedback without
-              friction.
+          <div className="font-[family-name:var(--font-switzer)] font-normal text-xl md:leading-14 leading-10 tracking-[-0.015em] text-[#B3B3B3] mb-8 max-w-full">
+            I’m a versatile Video Editor dedicated to crafting clear, engaging, and visually compelling stories. With over three years of experience, I’ve edited content for broadcast, digital, and branded platforms—shaping lifestyle, cultural, documentary, and entertainment projects that connect with audiences.
+            <p className="mt-6">
+              My strength lies in story-first editing: refining narrative flow, enhancing pacing, elevating performances, and bringing visuals, sound, and rhythm together to create edits that feel seamless and intentional. With a solid background in production, I understand the full journey from concept to final delivery, allowing me to collaborate smoothly with directors, producers, and creative teams.
             </p>{" "}
-            <p>
-              Before ReelSync, I spent 2 years leading the editorial team at
-              Studio Nine, shaping how production houses approach narrative,
-              color, pacing, and sound design across long-form and short-form
-              content. In 2024, I worked on the early edit direction for
-              FocusFlow (Alpha) at Collective Studios in London, helping define
-              the video aesthetic and story arc for the product&apos;s launch.
-              FocusFlow was later re-edited to create a more distilled,
-              cinematic experience that helped users feel immersed and
-              motivated.
+            <p className="mt-6">
+              Whether it’s a fast-turn social campaign or a full-scale series, my goal is simple: deliver polished visuals, smooth storytelling, and edits that leave a lasting impact.
             </p>{" "}
-            As a storyteller with a deep love for pacing, emotion, and rhythm, I
-            enjoy bringing ideas to life with other creative people. And when
-            I&apos;m not editing, refining cuts, building tools, or directing
-            post-production workflows, you&apos;ll probably find me watching
-            YouTube videos about filmmaking, design, color theory, and creative
-            excellence.
-          </p>
+            <p className="mt-6">
+              Currently, I work as a freelance Video Editor, taking on diverse projects across digital, commercial, and branded content—continuing to shape stories with clarity, creativity, and strong visual direction.
+            </p>
+          </div>
           <div className="flex justify-between">
             <div className="w-full md:w-auto">
               <SocialLinks />
@@ -144,7 +78,7 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <p className="font-[family-name:var(--font-switzer)] font-normal text-xl leading-relaxed tracking-[-0.015em] text-[#B3B3B3]">
+                  <p className="font-[family-name:var(--font-switzer)] font-normal text-xl leading-relaxed tracking-[-0.015em] text-[#B3B3B3] whitespace-pre-line">
                     {job.description}
                   </p>
                 </div>

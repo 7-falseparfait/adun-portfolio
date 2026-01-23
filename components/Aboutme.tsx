@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import SectionHeading from "./ui/SectionHeading";
+import Link from "next/link";
 import SectionLabel from "./ui/SectionLabel";
 import StatCard from "./ui/StatCard";
 import ToolCapsule from "./ui/toolcapsule";
@@ -109,52 +110,56 @@ const Aboutme = () => {
         <div className="place-items-center md:mt-24">
           {/* Button Container */}
           <div className="flex flex-col md:flex-row items-center gap-4 mt-8">
-            <Button
-              variant="default"
-              className="
-      cursor-pointer 
-      !bg-white !text-black hover:!bg-neutral-200 
-      !rounded-full 
-      font-medium
-      
-      /* Mobile Defaults */
-      px-6 py-2 text-sm
-      
-      /* Desktop Specs */
-      md:w-[155px] md:h-[64px] 
-      md:px-[48px] md:py-[20px] 
-      md:text-base
-    "
-            >
-              Hire Me
-            </Button>
-            <Button
-              variant="outline"
-              className="
-      cursor-pointer
-      !bg-transparent 
-      !text-white 
-      hover:!bg-[#1a1a1a] 
-      !rounded-full 
-      font-medium
-      
-      /* Border Specs */
-      !border-[0.5px] !border-[#494949]
-      
-      /* Mobile Defaults */
-      px-6 py-2 text-sm
-      
-      /* Desktop Specs (Exact Match) */
-      md:w-[178px]       /* Width: 178 */
-      md:h-[64px]        /* Height: 64 */
-      md:px-[48px]       /* Padding-left/right: 48 */
-      md:py-[20px]       /* Padding-top/bottom: 20 */
-      md:gap-[8px]       /* Gap: 8 */
-      md:text-base
-    "
-            >
-              Read More
-            </Button>
+            <Link href="mailto:Ainamuyiwa18@gmail.com">
+              <Button
+                variant="default"
+                className="
+        cursor-pointer 
+        !bg-white !text-black hover:!bg-neutral-200 
+        !rounded-full 
+        font-medium
+        
+        /* Mobile Defaults */
+        px-6 py-2 text-sm w-[180px]
+        
+        /* Desktop Specs */
+        md:w-[180px] md:h-[64px] 
+        md:px-[48px] md:py-[20px] 
+        md:text-base
+      "
+              >
+                Hire Me
+              </Button>
+            </Link>
+            <Link href="/about">
+              <Button
+                variant="outline"
+                className="
+        cursor-pointer
+        !bg-transparent 
+        !text-white 
+        hover:!bg-[#1a1a1a] 
+        !rounded-full 
+        font-medium
+        
+        /* Border Specs */
+        !border-[0.5px] !border-[#494949]
+        
+        /* Mobile Defaults */
+        px-6 py-2 text-sm w-[180px]
+        
+        /* Desktop Specs */
+        md:w-[180px]      
+        md:h-[64px]        
+        md:px-[48px]       
+        md:py-[20px]       
+        md:gap-[8px]       
+        md:text-base
+      "
+              >
+                Read More
+              </Button>
+            </Link>
           </div>
         </div>
       </Container>

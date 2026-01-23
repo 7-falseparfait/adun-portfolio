@@ -16,7 +16,7 @@ interface NavLinksProps {
 
 const NavLinks = ({ isMobile = false, className = "" }: NavLinksProps) => {
   const navLinks = [
-    { name: "Work", href: "#work" },
+    { name: "Work", href: "/" },
     { name: "About", href: "/about" },
     { name: "Resume", href: "#resume" },
   ];

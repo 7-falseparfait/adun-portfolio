@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import SocialLinks from "./SocialLinks";
 import NavLinks from "./ui/NavLinks";
+import Link from "next/link";
 import Container from "./Container";
 
 const Footer = () => {
@@ -16,9 +17,11 @@ const Footer = () => {
               <h1 className="font-[family-name:var(--font-crimson)] font-medium text-6xl">
                 Have a project in mind?
               </h1>
-              <Button className="rounded-3xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-6 px-9">
-                Send a mail
-              </Button>
+              <Link href="mailto:Ainamuyiwa18@gmail.com">
+                <Button className="rounded-3xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-6 px-9">
+                  Send a mail
+                </Button>
+              </Link>
             </div>
 
             <div className="flex justify-between items-center w-full">
