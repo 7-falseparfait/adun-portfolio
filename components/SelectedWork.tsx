@@ -80,8 +80,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
                 title={project.title}
                 tag={project.tag}
                 imageSrc={project.imageSrc}
-                // Pass the preview source to VideoCard for the hover effect
-                videoSrc={project.previewSrc}
+              // Pass the preview source to VideoCard for the hover effect
               />
             </div>
           ))}
