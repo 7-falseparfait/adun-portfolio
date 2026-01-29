@@ -1,5 +1,5 @@
 "use client"; // Required for state
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Container from "./Container";
 import { Button } from "./ui/button";
 import SectionHeading from "./ui/SectionHeading";
@@ -7,60 +7,70 @@ import SectionLabel from "./ui/SectionLabel";
 import WorkFilters from "./ui/WorkFilters";
 import VideoCard from "./VideoCard";
 import VideoModal from "./ui/VideoModal";
+import Link from "next/link";
 
-const SelectedWork = () => {
+interface SelectedWorkProps {
+  showFilters?: boolean;
+}
+
+const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
   // State to track which YouTube video is currently open
   const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("All");
 
   const projects = [
     {
       id: 1,
-      title: "Test Project: Nature",
-      tag: "Cinematography",
-      // A safe 4K nature video on YouTube
-      youtubeId: "LXb3EKWsInQ",
-      previewSrc: "https://res.cloudinary.com/demo/video/upload/dog.mp4",
-      imageSrc:
-        "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop",
+      title: "Joeboy Listening Party",
+      tag: "Event & Lifestyle",
+      youtubeId: "qqYQHrXm_zE",
+      imageSrc: "https://img.youtube.com/vi/qqYQHrXm_zE/maxresdefault.jpg",
     },
     {
       id: 2,
-      title: "zzz",
-      tag: "Event & Lifestyle",
-      youtubeId: "LXb3EKWsInQ",
-      previewSrc: "https://res.cloudinary.com/demo/video/upload/v1/dog.mp4",
-      imageSrc:
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2000&auto=format&fit=crop",
+      title: "MTV Base Day",
+      tag: "Brand & Business",
+      youtubeId: "p6SNNvxyO9A",
+      imageSrc: "https://img.youtube.com/vi/p6SNNvxyO9A/maxresdefault.jpg",
     },
     {
       id: 3,
-      title: "Tech Review: lorem",
-      tag: "Talking Head",
-      youtubeId: "dQw4w9WgXcQ",
-      previewSrc: "https://res.cloudinary.com/demo/video/upload/v1/dog.mp4",
-      imageSrc:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2000&auto=format&fit=crop",
+      title: "Kara Fest",
+      tag: "Event & Lifestyle",
+      youtubeId: "8_xqRnE7Ot0",
+      imageSrc: "https://img.youtube.com/vi/8_xqRnE7Ot0/maxresdefault.jpg",
     },
     {
       id: 4,
-      title: "Lalalala",
-      tag: "Social Media Edit",
-      youtubeId: "LXb3EKWsInQ",
-      previewSrc: "https://res.cloudinary.com/demo/video/upload/v1/dog.mp4",
-      imageSrc:
-        "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2000&auto=format&fit=crop",
+      title: "BET Streetz Ghana",
+      tag: "Narrative & Creative",
+      youtubeId: "Dhj-E4Co6yo",
+      imageSrc: "https://img.youtube.com/vi/Dhj-E4Co6yo/maxresdefault.jpg",
     },
   ];
+
+  const filteredProjects = useMemo(() => {
+    if (!showFilters || activeCategory === "All") {
+      return projects;
+    }
+    return projects.filter((project) => project.tag === activeCategory);
+  }, [showFilters, activeCategory, projects]);
 
   return (
     <section id="work" className="w-full py-15 bg-background">
       <Container>
         <SectionLabel className="flex items-center justify-center" />
         <SectionHeading className="md:max-w-[450px] mt-3" />
-        <WorkFilters />
+
+        {showFilters && (
+          <WorkFilters
+            activeTag={activeCategory}
+            onChange={setActiveCategory}
+          />
+        )}
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-22 gap-y-10 md:mt-6">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelectedVideoId(project.youtubeId)}
@@ -77,11 +87,15 @@ const SelectedWork = () => {
           ))}
         </div>
 
-        <div className="w-full mt-16 flex justify-center">
-          <Button className="w-full md:w-auto md:px-12 md:py-[30px] rounded-4xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-7 px-9 md:text-base font-medium">
-            View all work
-          </Button>
-        </div>
+        {!showFilters && (
+          <div className="w-full mt-16 flex justify-center">
+            <Link href="/work">
+              <Button className="w-full md:w-auto md:px-12 md:py-[30px] rounded-4xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-7 px-9 md:text-base font-medium">
+                View all work
+              </Button>
+            </Link>
+          </div>
+        )}
       </Container>
 
       {/* The Modal Component sits outside the loop */}

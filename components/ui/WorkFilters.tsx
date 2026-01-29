@@ -15,8 +15,10 @@ const defaultTags = [
   "Narrative & Creative",
 ];
 
-const WorkFilters = ({ tags = defaultTags, onChange }: WorkFiltersProps) => {
-  const [activeCategory, setActiveCategory] = useState<string>(tags[0]);
+const WorkFilters = ({ tags = defaultTags, onChange, activeTag }: WorkFiltersProps & { activeTag?: string }) => {
+  const [internalActive, setInternalActive] = useState<string>(tags[0]);
+
+  const currentActive = activeTag || internalActive;
 
   return (
     <div
@@ -33,9 +35,9 @@ const WorkFilters = ({ tags = defaultTags, onChange }: WorkFiltersProps) => {
         <FilterButton
           key={t}
           label={t}
-          isActive={activeCategory === t}
+          isActive={currentActive === t}
           onClick={() => {
-            setActiveCategory(t);
+            setInternalActive(t);
             onChange?.(t);
           }}
         />

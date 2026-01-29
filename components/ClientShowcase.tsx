@@ -9,11 +9,11 @@ import SectionHeading from "./ui/SectionHeading";
 const clients = [
   {
     id: 1,
-    name: "Netflix",
+    name: "Brand Campaign",
     projects: [
-      { id: 1, image: "/netflix-img.png", alt: "Netflix Project 1" },
-      { id: 2, image: "/netflix-2.avif", alt: "Netflix Project 2" },
-      { id: 3, image: "/netflix-3.avif", alt: "Netflix Project 3" },
+      { id: 1, image: "/Avatar.jpg", alt: "Brand Project 1" },
+      { id: 2, image: "/Avatar.jpg", alt: "Brand Project 2" },
+      { id: 3, image: "/Avatar.jpg", alt: "Brand Project 3" },
     ],
   },
   {
@@ -25,8 +25,8 @@ const clients = [
     id: 3,
     name: "MTV Base",
     projects: [
-      { id: 1, image: "/netflix-1.jpg", alt: "MTV Base Project 1" },
-      { id: 2, image: "/netflix-2.jpg", alt: "MTV Base Project 2" },
+      { id: 1, image: "/Avatar.jpg", alt: "MTV Base Project 1" },
+      { id: 2, image: "/Avatar.jpg", alt: "MTV Base Project 2" },
     ],
   },
 ];

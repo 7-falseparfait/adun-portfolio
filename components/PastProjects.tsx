@@ -21,8 +21,8 @@ const projects = [
     description:
       "Directed high-energy music campaigns and lifestyle content for the youth demographic.",
     media: [
-      { id: 1, image: "/netflix-1.jpg", alt: "MTV Base Project 1" },
-      { id: 2, image: "/netflix-2.jpg", alt: "MTV Base Project 2" },
+      { id: 1, image: "/Avatar.jpg", alt: "MTV Base Project 1" },
+      { id: 2, image: "/Avatar.jpg", alt: "MTV Base Project 2" },
     ],
   },
 ];

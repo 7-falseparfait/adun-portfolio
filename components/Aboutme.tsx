@@ -73,7 +73,7 @@ const Aboutme = () => {
               ))}
             </div>
 
-            {/* 2. Duplicate Set (Required for loop) */}
+            {/* 2. Duplicate Set */}
             <div className="flex gap-4 px-2">
               {tools.map((tool, index) => (
                 <ToolCapsule
@@ -84,7 +84,7 @@ const Aboutme = () => {
               ))}
             </div>
 
-            {/* 3. Triplicate Set (Safety for wide screens) */}
+            {/* 3. Triplicate Set */}
             <div className="flex gap-4 px-2">
               {tools.map((tool, index) => (
                 <ToolCapsule
@@ -95,11 +95,55 @@ const Aboutme = () => {
               ))}
             </div>
 
-            {/* 4. Quadruplicate Set (Safety for very wide screens) */}
+            {/* 4. Quadruplicate Set */}
             <div className="flex gap-4 px-2">
               {tools.map((tool, index) => (
                 <ToolCapsule
                   key={`d-${index}`}
+                  label={tool.label}
+                  iconSrc={tool.icon}
+                />
+              ))}
+            </div>
+
+            {/* 5. Quintuplicate Set */}
+            <div className="flex gap-4 px-2">
+              {tools.map((tool, index) => (
+                <ToolCapsule
+                  key={`e-${index}`}
+                  label={tool.label}
+                  iconSrc={tool.icon}
+                />
+              ))}
+            </div>
+
+            {/* 6. Sextuplicate Set */}
+            <div className="flex gap-4 px-2">
+              {tools.map((tool, index) => (
+                <ToolCapsule
+                  key={`f-${index}`}
+                  label={tool.label}
+                  iconSrc={tool.icon}
+                />
+              ))}
+            </div>
+
+            {/* 7. Septuplicate Set */}
+            <div className="flex gap-4 px-2">
+              {tools.map((tool, index) => (
+                <ToolCapsule
+                  key={`g-${index}`}
+                  label={tool.label}
+                  iconSrc={tool.icon}
+                />
+              ))}
+            </div>
+
+            {/* 8. Octuplicate Set */}
+            <div className="flex gap-4 px-2">
+              {tools.map((tool, index) => (
+                <ToolCapsule
+                  key={`h-${index}`}
                   label={tool.label}
                   iconSrc={tool.icon}
                 />
@@ -163,7 +207,7 @@ const Aboutme = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </section >
   );
 };
 
