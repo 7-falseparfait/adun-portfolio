@@ -13,7 +13,7 @@ const workHistory = [
     company: "DAT Creative International",
     period: "2022 - 2025",
     description:
-      "Edited a wide range of television and digital content for platforms including MTV Base West Africa, BET Africa, and major FMCG brands. Collaborated closely with directors and creative teams to shape compelling visual narratives, refine pacing, enhance performances, and deliver polished edits aligned with each project’s creative goals.\n\nIn addition to editing, supported concept development, content strategy, and overall production execution, ensuring a smooth workflow from pre-production to final delivery."
+      "Edited a wide range of television and digital content for platforms including MTV Base West Africa, BET Africa, and major FMCG brands. Collaborated closely with directors and creative teams to shape compelling visual narratives, refine pacing, enhance performances, and deliver polished edits aligned with each project’s creative goals.\n\nIn addition to editing, supported concept development, content strategy, and overall production execution, ensuring a smooth workflow from pre-production to final delivery.",
   },
 ];
 
@@ -28,15 +28,30 @@ export default function AboutPage() {
             About Me
           </h1>
           <div className="font-[family-name:var(--font-switzer)] font-normal text-xl md:leading-14 leading-10 tracking-[-0.015em] text-[#B3B3B3] mb-8 max-w-full">
-            I’m a versatile Video Editor dedicated to crafting clear, engaging, and visually compelling stories. With over three years of experience, I’ve edited content for broadcast, digital, and branded platforms—shaping lifestyle, cultural, documentary, and entertainment projects that connect with audiences.
+            I’m a versatile Video Editor dedicated to crafting clear, engaging,
+            and visually compelling stories. With over three years of
+            experience, I’ve edited content for broadcast, digital, and branded
+            platforms—shaping lifestyle, cultural, documentary, and
+            entertainment projects that connect with audiences.
             <p className="mt-6">
-              My strength lies in story-first editing: refining narrative flow, enhancing pacing, elevating performances, and bringing visuals, sound, and rhythm together to create edits that feel seamless and intentional. With a solid background in production, I understand the full journey from concept to final delivery, allowing me to collaborate smoothly with directors, producers, and creative teams.
+              My strength lies in story-first editing: refining narrative flow,
+              enhancing pacing, elevating performances, and bringing visuals,
+              sound, and rhythm together to create edits that feel seamless and
+              intentional. With a solid background in production, I understand
+              the full journey from concept to final delivery, allowing me to
+              collaborate smoothly with directors, producers, and creative
+              teams.
             </p>{" "}
             <p className="mt-6">
-              Whether it’s a fast-turn social campaign or a full-scale series, my goal is simple: deliver polished visuals, smooth storytelling, and edits that leave a lasting impact.
+              Whether it’s a fast-turn social campaign or a full-scale series,
+              my goal is simple: deliver polished visuals, smooth storytelling,
+              and edits that leave a lasting impact.
             </p>{" "}
             <p className="mt-6">
-              Currently, I work as a freelance Video Editor, taking on diverse projects across digital, commercial, and branded content—continuing to shape stories with clarity, creativity, and strong visual direction.
+              Currently, I work as a freelance Video Editor, taking on diverse
+              projects across digital, commercial, and branded
+              content—continuing to shape stories with clarity, creativity, and
+              strong visual direction.
             </p>
           </div>
           <div className="flex justify-between">
@@ -86,7 +101,7 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
-        <Gallery />
+        {/* <Gallery /> */}
       </Container>
     </main>
   );

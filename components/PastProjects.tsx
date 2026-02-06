@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 import Container from "./Container";
 import SectionLabel from "./ui/SectionLabel";
 import SectionHeading from "./ui/SectionHeading";
+import VideoModal from "./ui/VideoModal";
 
 // DATA
 const projects = [
@@ -13,7 +14,13 @@ const projects = [
     clientName: "BET Africa",
     description:
       "Produced and directed 40+ episodes of Bet Streetz, a vibrant lifestyle series exploring African cities.",
-    media: [{ id: 1, image: "/BET.jpg", alt: "BET Africa Project 1" }],
+    media: [
+      {
+        id: 1,
+        image: "https://img.youtube.com/vi/Dhj-E4Co6yo/maxresdefault.jpg",
+        alt: "BET Streetz Ghana",
+      },
+    ],
   },
   {
     id: 2,
@@ -21,8 +28,31 @@ const projects = [
     description:
       "Directed high-energy music campaigns and lifestyle content for the youth demographic.",
     media: [
-      { id: 1, image: "/Avatar.jpg", alt: "MTV Base Project 1" },
-      { id: 2, image: "/Avatar.jpg", alt: "MTV Base Project 2" },
+      {
+        id: 1,
+        image: "https://img.youtube.com/vi/-nvTOwR5w6s/maxresdefault.jpg",
+        alt: "Touching Base: Nasty C",
+      },
+      {
+        id: 2,
+        image: "https://img.youtube.com/vi/2gvId6ITWEg/maxresdefault.jpg",
+        alt: "Falz Listening Party",
+      },
+      {
+        id: 3,
+        image: "https://img.youtube.com/vi/_imURVADzLM/maxresdefault.jpg",
+        alt: "Fuze Festival",
+      },
+      {
+        id: 4,
+        image: "https://img.youtube.com/vi/qqYQHrXm_zE/maxresdefault.jpg",
+        alt: "Joeboy Listening Party",
+      },
+      {
+        id: 5,
+        image: "https://img.youtube.com/vi/p6SNNvxyO9A/maxresdefault.jpg",
+        alt: "MTV Base Day",
+      },
     ],
   },
 ];
@@ -30,11 +60,13 @@ const projects = [
 const PastProjects = () => {
   const [activeCategory, setActiveCategory] = useState(projects[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null);
 
   // Switch Category
   const handleCategoryClick = (category: (typeof projects)[0]) => {
     setActiveCategory(category);
     setCurrentIndex(0);
+    setSelectedVideoId(null);
   };
 
   // Carousel Navigation
@@ -42,15 +74,18 @@ const PastProjects = () => {
     setCurrentIndex((prev) =>
       prev === 0 ? activeCategory.media.length - 1 : prev - 1,
     );
+    setSelectedVideoId(null);
   };
 
   const handleNext = () => {
     setCurrentIndex((prev) =>
       prev === activeCategory.media.length - 1 ? 0 : prev + 1,
     );
+    setSelectedVideoId(null);
   };
 
   const hasMultiple = activeCategory.media.length > 1;
+  const currentMedia = activeCategory.media[currentIndex];
 
   return (
     <section id="showreel" className="w-full py-20 bg-background">
@@ -76,9 +111,10 @@ const PastProjects = () => {
                 className={`
                   px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
                   border cursor-pointer
-                  ${isActive
-                    ? "bg-white text-black border-transparent"
-                    : "bg-[#111111] text-[#B3B3B3] border-[#333] hover:border-white/40"
+                  ${
+                    isActive
+                      ? "bg-white text-black border-transparent"
+                      : "bg-[#111111] text-[#B3B3B3] border-[#333] hover:border-white/40"
                   }
                 `}
               >
@@ -90,7 +126,10 @@ const PastProjects = () => {
 
         {/* Dynamic Description Text */}
         <div className="text-center max-w-2xl mx-auto mb-12 min-h-[60px]">
-          <p className="text-[#B3B3B3] font-switzer text-sm md:text-base leading-relaxed animate-in fade-in duration-500 key={activeCategory.id}">
+          <p
+            key={activeCategory.id}
+            className="text-[#B3B3B3] font-switzer text-sm md:text-base leading-relaxed animate-in fade-in duration-500"
+          >
             {activeCategory.description}
           </p>
         </div>
@@ -101,19 +140,26 @@ const PastProjects = () => {
             {/* Phone Wrapper */}
             <div className="relative w-[300px] h-[600px] md:w-[350px] md:h-[700px] shrink-0 transform scale-90 md:scale-100 transition-transform">
               {/* Screen */}
-              <div className="absolute top-[18px] left-[20px] w-[260px] h-[565px] md:top-[22px] md:left-[24px] md:w-[305px] md:h-[655px] rounded-[35px] overflow-hidden bg-black z-0">
-                <Image
-                  src={activeCategory.media[currentIndex].image}
-                  fill
-                  alt={activeCategory.media[currentIndex].alt}
-                  className="object-cover"
+              <button
+                type="button"
+                onClick={() => {
+                  const id = currentMedia.image.match(/vi\/([^/]+)/)?.[1];
+                  if (id) setSelectedVideoId(id);
+                }}
+                className="absolute top-[18px] left-[20px] w-[260px] h-[565px] md:top-[22px] md:left-[24px] md:w-[305px] md:h-[655px] rounded-[35px] overflow-hidden bg-black z-0 cursor-pointer group"
+                aria-label={`Play ${currentMedia.alt}`}
+              >
+                <img
+                  src={currentMedia.image}
+                  alt={currentMedia.alt}
+                  className="object-cover w-full h-full absolute inset-0"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/10">
-                  <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center pl-1 border border-white/20">
+                <span className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+                  <span className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center pl-1 border border-white/20 group-hover:scale-110 transition-transform">
                     <Play fill="white" className="text-white w-6 h-6" />
-                  </div>
-                </div>
-              </div>
+                  </span>
+                </span>
+              </button>
 
               {/* Chassis */}
               <div className="absolute inset-0 z-10 pointer-events-none">
@@ -149,6 +195,12 @@ const PastProjects = () => {
           </div>
         </div>
       </Container>
+
+      <VideoModal
+        isOpen={!!selectedVideoId}
+        videoId={selectedVideoId || ""}
+        onClose={() => setSelectedVideoId(null)}
+      />
     </section>
   );
 };

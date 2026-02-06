@@ -18,39 +18,122 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
   const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  const projects = [
-    {
-      id: 1,
-      title: "Joeboy Listening Party",
-      tag: "Event & Lifestyle",
-      youtubeId: "qqYQHrXm_zE",
-      imageSrc: "https://img.youtube.com/vi/qqYQHrXm_zE/maxresdefault.jpg",
-    },
-    {
-      id: 2,
-      title: "MTV Base Day",
-      tag: "Brand & Business",
-      youtubeId: "p6SNNvxyO9A",
-      imageSrc: "https://img.youtube.com/vi/p6SNNvxyO9A/maxresdefault.jpg",
-    },
-    {
-      id: 3,
-      title: "Kara Fest",
-      tag: "Event & Lifestyle",
-      youtubeId: "8_xqRnE7Ot0",
-      imageSrc: "https://img.youtube.com/vi/8_xqRnE7Ot0/maxresdefault.jpg",
-    },
-    {
-      id: 4,
-      title: "BET Streetz Ghana",
-      tag: "Narrative & Creative",
-      youtubeId: "Dhj-E4Co6yo",
-      imageSrc: "https://img.youtube.com/vi/Dhj-E4Co6yo/maxresdefault.jpg",
-    },
-  ];
+  const projects = useMemo(
+    () => [
+      {
+        id: 1,
+        title: "Falz Listening Party",
+        tag: "Event & Lifestyle",
+        youtubeId: "2gvId6ITWEg",
+        imageSrc: "https://img.youtube.com/vi/2gvId6ITWEg/maxresdefault.jpg",
+      },
+      {
+        id: 2,
+        title: "Fido Listening Party",
+        tag: "Event & Lifestyle",
+        youtubeId: "O-mgaVsCj8Q",
+        imageSrc: "https://img.youtube.com/vi/O-mgaVsCj8Q/maxresdefault.jpg",
+      },
+      {
+        id: 3,
+        title: "Fuze Festival",
+        tag: "Event & Lifestyle",
+        youtubeId: "_imURVADzLM",
+        imageSrc: "https://img.youtube.com/vi/_imURVADzLM/maxresdefault.jpg",
+      },
+      {
+        id: 4,
+        title: "Get to Know Marz",
+        tag: "Narrative & Creative",
+        youtubeId: "Jmm8uLhxpPI",
+        imageSrc: "https://img.youtube.com/vi/Jmm8uLhxpPI/maxresdefault.jpg",
+      },
+      {
+        id: 5,
+        title: "Get to Know Zhus",
+        tag: "Narrative & Creative",
+        youtubeId: "dK3zizZbIeE",
+        imageSrc: "https://img.youtube.com/vi/dK3zizZbIeE/maxresdefault.jpg",
+      },
+      {
+        id: 6,
+        title: "Joeboy Listening Party",
+        tag: "Event & Lifestyle",
+        youtubeId: "qqYQHrXm_zE",
+        imageSrc: "https://img.youtube.com/vi/qqYQHrXm_zE/maxresdefault.jpg",
+      },
+      {
+        id: 7,
+        title: "Kara Fest",
+        tag: "Event & Lifestyle",
+        youtubeId: "8_xqRnE7Ot0",
+        imageSrc: "https://img.youtube.com/vi/8_xqRnE7Ot0/maxresdefault.jpg",
+      },
+      {
+        id: 8,
+        title: "MTV Base Day",
+        tag: "Brand & Business",
+        youtubeId: "p6SNNvxyO9A",
+        imageSrc: "https://img.youtube.com/vi/p6SNNvxyO9A/maxresdefault.jpg",
+      },
+      {
+        id: 9,
+        title: "BET Streetz Ghana",
+        tag: "Narrative & Creative",
+        youtubeId: "Dhj-E4Co6yo",
+        imageSrc: "https://img.youtube.com/vi/Dhj-E4Co6yo/maxresdefault.jpg",
+      },
+      {
+        id: 10,
+        title: "Real Show Boy vs Tear Boxer",
+        tag: "Narrative & Creative",
+        youtubeId: "vVlEiRs_e0E",
+        imageSrc: "https://img.youtube.com/vi/vVlEiRs_e0E/maxresdefault.jpg",
+      },
+      {
+        id: 11,
+        title: "Rexxie Listening Party",
+        tag: "Event & Lifestyle",
+        youtubeId: "6rUWHv5SOnM",
+        imageSrc: "https://img.youtube.com/vi/6rUWHv5SOnM/maxresdefault.jpg",
+      },
+      {
+        id: 12,
+        title: "Radiat vs Cynthia",
+        tag: "Narrative & Creative",
+        youtubeId: "gvKw2sI5L7E",
+        imageSrc: "https://img.youtube.com/vi/gvKw2sI5L7E/maxresdefault.jpg",
+      },
+      {
+        id: 13,
+        title: "Sisqo Live in Lagos",
+        tag: "Brand & Business",
+        youtubeId: "tyh07ygYnIs",
+        imageSrc: "https://img.youtube.com/vi/tyh07ygYnIs/maxresdefault.jpg",
+      },
+      {
+        id: 14,
+        title: "Spyro Listening Party",
+        tag: "Event & Lifestyle",
+        youtubeId: "EvCt4WrW-0c",
+        imageSrc: "https://img.youtube.com/vi/EvCt4WrW-0c/maxresdefault.jpg",
+      },
+      {
+        id: 15,
+        title: "Touching Base: Nasty C",
+        tag: "Brand & Business",
+        youtubeId: "-nvTOwR5w6s",
+        imageSrc: "https://img.youtube.com/vi/-nvTOwR5w6s/maxresdefault.jpg",
+      },
+    ],
+    [],
+  );
 
   const filteredProjects = useMemo(() => {
-    if (!showFilters || activeCategory === "All") {
+    if (!showFilters) {
+      return projects.slice(0, 4);
+    }
+    if (activeCategory === "All") {
       return projects;
     }
     return projects.filter((project) => project.tag === activeCategory);
@@ -59,9 +142,6 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
   return (
     <section id="work" className="w-full py-15 bg-background">
       <Container>
-        <SectionLabel className="flex items-center justify-center" />
-        <SectionHeading className="md:max-w-[450px] mt-3" />
-
         {showFilters && (
           <WorkFilters
             activeTag={activeCategory}
@@ -69,7 +149,14 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
           />
         )}
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-22 gap-y-10 md:mt-6">
+        {!showFilters && (
+          <>
+            <SectionLabel className="flex items-center justify-center" />
+            <SectionHeading className="md:max-w-[450px] mt-3" />
+          </>
+        )}
+
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-6 md:mt-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -80,7 +167,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
                 title={project.title}
                 tag={project.tag}
                 imageSrc={project.imageSrc}
-              // Pass the preview source to VideoCard for the hover effect
+                // Pass the preview source to VideoCard for the hover effect
               />
             </div>
           ))}

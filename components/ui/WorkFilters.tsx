@@ -8,14 +8,17 @@ interface WorkFiltersProps {
 }
 
 const defaultTags = [
-  "Talking Head",
-  "Social Media Edit",
+  "All",
   "Event & Lifestyle",
   "Brand & Business",
   "Narrative & Creative",
 ];
 
-const WorkFilters = ({ tags = defaultTags, onChange, activeTag }: WorkFiltersProps & { activeTag?: string }) => {
+const WorkFilters = ({
+  tags = defaultTags,
+  onChange,
+  activeTag,
+}: WorkFiltersProps & { activeTag?: string }) => {
   const [internalActive, setInternalActive] = useState<string>(tags[0]);
 
   const currentActive = activeTag || internalActive;
