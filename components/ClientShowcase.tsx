@@ -19,8 +19,10 @@ const clients = [
   {
     id: 2,
     name: "BET Africa",
-    projects: [{ id: 1, image: "/BET.jpg", alt: "BET Africa Project 1" }],
-    projects: [{ id: 1, image: "https://img.youtube.com/vi/Dhj-E4Co6yo/maxresdefault.jpg", alt: "BET Streetz Ghana" }],
+    projects: [
+      { id: 1, image: "/BET.jpg", alt: "BET Africa Project 1" },
+      { id: 2, image: "https://img.youtube.com/vi/Dhj-E4Co6yo/maxresdefault.jpg", alt: "BET Streetz Ghana" },
+    ],
   },
   {
     id: 3,
@@ -114,12 +116,10 @@ const ClientShowcase = () => {
               {/* Screen Content */}
               <div className="absolute top-[18px] left-[20px] w-[260px] h-[565px] md:top-[22px] md:left-[24px] md:w-[305px] md:h-[655px] rounded-[35px] overflow-hidden bg-black z-0">
                 <Image
-                <img
                   src={selectedClient.projects[currentProjectIndex].image}
                   fill
                   alt={selectedClient.projects[currentProjectIndex].alt}
                   className="object-cover"
-                  className="object-cover w-full h-full absolute inset-0"
                 />
 
                 {/* Optional: Play Button Overlay (Purely visual per your ref image) */}
