@@ -18,7 +18,12 @@ const NavLinks = ({ isMobile = false, className = "" }: NavLinksProps) => {
   const navLinks = [
     { name: "Work", href: "/work" },
     { name: "About", href: "/about" },
-    { name: "Resume", href: "#resume" },
+    {
+      name: "Resume",
+      href: "https://docs.google.com/document/d/1nibQ1YLGW9fwdedXFg-UIcq_v2zcNW4-1dLWfLWrm7M/edit?usp=sharing",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
   ];
 
   if (isMobile) {

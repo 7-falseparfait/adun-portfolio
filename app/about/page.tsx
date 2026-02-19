@@ -101,7 +101,7 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
-        {/* <Gallery /> */}
+        <Gallery />
       </Container>
     </main>
   );

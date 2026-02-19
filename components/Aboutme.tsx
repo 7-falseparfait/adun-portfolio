@@ -15,7 +15,7 @@ const details = [
 ];
 
 const tools = [
-  { label: "Photoshop", icon: "/photoshop.png" },
+  { label: "Photoshop", icon: "/adobe-photoshop-2.svg" },
   { label: "DaVinci Resolve", icon: "/davinci.png" },
   { label: "CapCut", icon: "/capcut-3.png" },
   { label: "After Effects", icon: "/after-effects-1.png" },

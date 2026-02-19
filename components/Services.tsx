@@ -137,6 +137,7 @@ const Services = () => {
       title: "Short-form Editing",
       description:
         "Fast, trendy, and built for TikTok, Reels and Shorts. Quick cuts that hook and keep viewers watching.",
+      imageSrc: "/short-form.png",
     },
     {
       id: 2,
@@ -145,6 +146,7 @@ const Services = () => {
       title: "Long-form Editing",
       description:
         "Polished storytelling for Youtube and podcasts. Smooth pacing, clean transition, and engaging flow.",
+      imageSrc: "/long-form.png",
     },
     {
       id: 3,
@@ -153,6 +155,7 @@ const Services = () => {
       title: "Motion Graphics",
       description:
         "Add energy and style with custom animations, texts and effects. Make your content pop.",
+      imageSrc: "/motion-graphics.png",
     },
     {
       id: 4,
@@ -161,6 +164,7 @@ const Services = () => {
       title: "Thumbnail Design",
       description:
         "Scroll-stopping thumbnails that boost clicks and match your brand aesthetic.",
+      imageSrc: "/thumbnail.png",
     },
   ];
 
@@ -184,6 +188,7 @@ const Services = () => {
               title={service.title}
               description={service.description}
               tags={service.tags}
+              imageSrc={service.imageSrc}
             />
           ))}
         </div>

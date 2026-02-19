@@ -111,10 +111,9 @@ const PastProjects = () => {
                 className={`
                   px-6 py-3 rounded-full text-sm font-medium transition-all duration-300
                   border cursor-pointer
-                  ${
-                    isActive
-                      ? "bg-white text-black border-transparent"
-                      : "bg-[#111111] text-[#B3B3B3] border-[#333] hover:border-white/40"
+                  ${isActive
+                    ? "bg-white text-black border-transparent"
+                    : "bg-[#111111] text-[#B3B3B3] border-[#333] hover:border-white/40"
                   }
                 `}
               >
@@ -149,16 +148,50 @@ const PastProjects = () => {
                 className="absolute top-[18px] left-[20px] w-[260px] h-[565px] md:top-[22px] md:left-[24px] md:w-[305px] md:h-[655px] rounded-[35px] overflow-hidden bg-black z-0 cursor-pointer group"
                 aria-label={`Play ${currentMedia.alt}`}
               >
+                {/* Background Image */}
                 <img
-                  src={currentMedia.image}
+                  src={
+                    activeCategory.clientName === "BET Africa"
+                      ? "/BET.jpg"
+                      : activeCategory.clientName === "MTV Base"
+                        ? "/mtvtheme.png"
+                        : currentMedia.image
+                  }
                   alt={currentMedia.alt}
                   className="object-cover w-full h-full absolute inset-0"
                 />
+
+                {/* --- 1. Top Progress Bars (Story Style) --- */}
+                {hasMultiple && (
+                  <div className="absolute top-4 left-0 w-full px-4 flex gap-1 z-20">
+                    {activeCategory.media.map((_, idx) => (
+                      <div
+                        key={idx}
+                        className={`h-1 rounded-full flex-1 transition-colors duration-300 ${idx === currentIndex
+                          ? "bg-white"
+                          : "bg-white/30"
+                          }`}
+                      />
+                    ))}
+                  </div>
+                )}
+
+                {/* Play Button */}
                 <span className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
-                  <span className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center pl-1 border border-white/20 group-hover:scale-110 transition-transform">
+                  <span className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center pl-1 border border-white/20 group-hover:scale-110 transition-transform animate-pulse">
                     <Play fill="white" className="text-white w-6 h-6" />
                   </span>
                 </span>
+
+                {/* --- 2. Bottom Title Overlay --- */}
+                <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent pt-20 flex flex-col items-center text-center">
+                  <span
+                    key={currentMedia.id} // Key change triggers animation
+                    className="text-white font-[family-name:var(--font-crimson)] text-xl animate-in slide-in-from-bottom-2 fade-in duration-500"
+                  >
+                    {currentMedia.alt}
+                  </span>
+                </div>
               </button>
 
               {/* Chassis */}
@@ -201,7 +234,7 @@ const PastProjects = () => {
         videoId={selectedVideoId || ""}
         onClose={() => setSelectedVideoId(null)}
       />
-    </section>
+    </section >
   );
 };
 

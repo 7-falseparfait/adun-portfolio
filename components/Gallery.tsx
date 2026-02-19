@@ -1,72 +1,33 @@
-import Image from "next/image";
+import Container from "./Container";
 
 const Gallery = () => {
   return (
-    <section className="mt-6">
+    <section className="mt-6 mb-20">
       <h2 className="font-[family-name:var(--font-crimson)] font-normal text-[32px] md:text-[64px] md:leading-[88px] leading-[38px] tracking-[-0.015em] text-center text-foreground mb-5 md:mb-12">
-        Gallery & Fun projects
+        Fun Projects
       </h2>
-      <div className="border border-white/10 overflow-hidden">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-          <Image
-            width={300}
-            height={464}
-            src="/1.jpg"
-            alt="image-1"
-            className="object-cover w-full h-full"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/2.jpg"
-            alt="image-2"
-            className="object-cover w-full h-full"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/3.jpg"
-            alt="image-3"
-            className="object-cover w-full h-full"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/4.jpg"
-            alt="image-4"
-            className="object-cover w-full h-full"
-          />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        {/* Reel 1 */}
+        <div className="w-full aspect-9/16 md:aspect-4/5 overflow-hidden rounded-2xl border border-white/10 relative bg-[#111]">
+          <iframe
+            src="https://www.instagram.com/reel/DRUFQnLDAon/embed/"
+            className="absolute inset-0 w-full h-full object-cover"
+            frameBorder="0"
+            scrolling="no"
+
+          ></iframe>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-          <Image
-            width={300}
-            height={464}
-            src="/5.png"
-            alt="image-5"
-            className="object-cover w-full h-full"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/6.png"
-            alt="image-6"
-            className="object-cover w-full h-full"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/7.png"
-            alt="image-7"
-            className="object-cover w-full h-full"
-          />
-          <Image
-            width={300}
-            height={464}
-            src="/8.png"
-            alt="image-8"
-            className="object-cover w-full h-full"
-          />
+        {/* Reel 2 */}
+        <div className="w-full aspect-9/16 md:aspect-4/5 overflow-hidden rounded-2xl border border-white/10 relative bg-[#111]">
+          <iframe
+            src="https://www.instagram.com/reel/DQUuOJWDKJ7/embed/"
+            className="absolute inset-0 w-full h-full object-cover"
+            frameBorder="0"
+            scrolling="no"
+
+          ></iframe>
         </div>
       </div>
     </section>
