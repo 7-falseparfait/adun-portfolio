@@ -17,11 +17,11 @@ const Footer = () => {
               <h1 className="font-[family-name:var(--font-crimson)] font-medium text-6xl">
                 Have a project in mind?
               </h1>
-              <Link href="mailto:Ainamuyiwa18@gmail.com">
-                <Button className="rounded-3xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-6 px-9">
+              <a href="mailto:Ainamuyiwa18@gmail.com">
+                <Button className="w-full rounded-3xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-6 px-9">
                   Send a mail
                 </Button>
-              </Link>
+              </a>
             </div>
 
             <div className="flex justify-between items-center w-full">

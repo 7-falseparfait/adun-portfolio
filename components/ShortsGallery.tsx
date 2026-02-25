@@ -9,6 +9,7 @@ import VideoModal from "./ui/VideoModal";
 
 const shorts = [
     // New Shorts
+    { id: "LkFmkgtQG0I", title: "Short 0" },
     { id: "9CZCCC7V96E", title: "Short 1" },
     { id: "f9s2oSSgSm0", title: "Short 2" },
     { id: "Ei2EFfZkN0o", title: "Short 4" },

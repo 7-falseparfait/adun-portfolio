@@ -14,9 +14,11 @@ const FooterMobile = () => {
               Have a project in mind?
             </h1>
 
-            <Button className="w-full rounded-3xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-6 mt-0 md:mt-0 px-9">
-              Send a mail
-            </Button>
+            <a href="mailto:Ainamuyiwa18@gmail.com" className="w-full">
+              <Button className="w-full rounded-3xl cursor-pointer bg-white text-black hover:bg-neutral-200 py-6 mt-0 md:mt-0 px-9">
+                Send a mail
+              </Button>
+            </a>
             <div className="w-full mt-10">
               <div className="w-full pt-3">
                 <NavLinks isMobile />

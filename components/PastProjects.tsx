@@ -13,7 +13,7 @@ const projects = [
     id: 1,
     clientName: "BET Africa",
     description:
-      "Edited 40+ episodes of Bet Streetz, a vibrant lifestyle series exploring African cities.",
+      "Edited 12+ episodes of Bet Streetz, a vibrant lifestyle series exploring African cities.",
     media: [
       {
         id: 1,
@@ -71,7 +71,7 @@ const projects = [
       {
         id: 7,
         image: "https://img.youtube.com/vi/Q_--2nOhZTY/maxresdefault.jpg",
-        alt: "Mtv base REGAL Client preview",
+        alt: "MTV Base REGAL",
       },
       {
         id: 8,
