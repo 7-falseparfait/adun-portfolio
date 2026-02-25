@@ -10,7 +10,7 @@ const VideoPlaceholder = () => {
 
   return (
     <>
-      <section className="w-full pt-10 pb-20 bg-background">
+      <div className="w-full pt-10">
         <div
           onClick={() => setIsOpen(true)}
           className="relative w-full aspect-video rounded-[24px] md:rounded-[40px] overflow-hidden group cursor-pointer border border-white/10"
@@ -57,7 +57,7 @@ const VideoPlaceholder = () => {
 
           </div>
         </div>
-      </section>
+      </div>
 
       <VideoModal
         isOpen={isOpen}

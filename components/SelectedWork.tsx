@@ -258,7 +258,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         {!showFilters && (
           <>
             <SectionLabel className="flex items-center justify-center" />
-            <SectionHeading className="md:max-w-[450px] mt-3" />
+            <SectionHeading className="md:max-w-[800px] mt-3" />
           </>
         )}
 
