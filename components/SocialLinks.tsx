@@ -4,7 +4,7 @@ import Link from "next/link";
 const socialLinks = [
   {
     name: "X",
-    icon: "/X.jpg",
+    icon: "/x_icon.jpeg",
     url: "https://x.com/adunoflagoz?s=21",
     width: 24,
     height: 24,

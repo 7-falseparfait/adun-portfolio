@@ -13,7 +13,7 @@ const projects = [
     id: 1,
     clientName: "BET Africa",
     description:
-      "Produced and directed 40+ episodes of Bet Streetz, a vibrant lifestyle series exploring African cities.",
+      "Edited 40+ episodes of Bet Streetz, a vibrant lifestyle series exploring African cities.",
     media: [
       {
         id: 1,
@@ -36,7 +36,7 @@ const projects = [
     id: 2,
     clientName: "MTV Base",
     description:
-      "Directed high-energy music campaigns and lifestyle content for the youth demographic.",
+      "Edited high-energy music campaigns and lifestyle content for the youth demographic.",
     media: [
       {
         id: 1,
@@ -76,7 +76,7 @@ const projects = [
       {
         id: 8,
         image: "https://img.youtube.com/vi/T1yODW74kCg/maxresdefault.jpg",
-        alt: "JAywise freestyle",
+        alt: "Jaywise freestyle",
       },
       {
         id: 9,
@@ -86,7 +86,7 @@ const projects = [
       {
         id: 10,
         image: "https://img.youtube.com/vi/TZC65EthMvc/maxresdefault.jpg",
-        alt: "Do you have what it takes to drop some bars?",
+        alt: "Drop Some Bars?",
       },
       {
         id: 11,
@@ -95,18 +95,48 @@ const projects = [
       },
       {
         id: 12,
-        image: "https://img.youtube.com/vi/XFVf3aF7PQQ/maxresdefault.jpg",
-        alt: "Pheelz gets candid with Culture Member Ilo",
+        image: "/pheelz.webp",
+        alt: "Pheelz Gets Candid",
       },
       {
         id: 13,
-        image: "https://img.youtube.com/vi/kLX9X8xSG2g/maxresdefault.jpg",
-        alt: "Esta Blish! Its Director Pink in Da Building!!!",
+        image: "/establish.jpg",
+        alt: "Esta Blish! With Director Pink",
       },
       {
         id: 14,
-        image: "https://img.youtube.com/vi/xAbfBR1BP58/maxresdefault.jpg",
-        alt: "Simi: Unleashing the Nigerian Music Magic!",
+        image: "/simi.jpg",
+        alt: "Simi: Nigerian Music Magic!",
+      },
+      {
+        id: 15,
+        image: "https://img.youtube.com/vi/YLEPoHbkK6A/maxresdefault.jpg",
+        alt: "BKAY",
+      },
+      {
+        id: 16,
+        image: "https://img.youtube.com/vi/yeDausrMouU/maxresdefault.jpg",
+        alt: "County Kuti Freestyle",
+      },
+      {
+        id: 17,
+        image: "https://img.youtube.com/vi/S06LX0HzzhA/maxresdefault.jpg",
+        alt: "Daddy Luwa Freestyle",
+      },
+      {
+        id: 18,
+        image: "https://img.youtube.com/vi/Ovrzc1jKW8s/maxresdefault.jpg",
+        alt: "Get To Know Oluchi",
+      },
+      {
+        id: 19,
+        image: "/nasboi.jpg",
+        alt: "Nasboi in the Building!",
+      },
+      {
+        id: 20,
+        image: "/pheelz.jpg",
+        alt: "Top 10 Street Anthems",
       },
     ],
   },
@@ -117,14 +147,13 @@ const PastProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null);
 
-  // Switch Category
+
   const handleCategoryClick = (category: (typeof projects)[0]) => {
     setActiveCategory(category);
     setCurrentIndex(0);
     setSelectedVideoId(null);
   };
 
-  // Carousel Navigation
   const handlePrev = () => {
     setCurrentIndex((prev) =>
       prev === 0 ? activeCategory.media.length - 1 : prev - 1,
@@ -206,17 +235,15 @@ const PastProjects = () => {
                 {/* Background Image */}
                 <img
                   src={
-                    activeCategory.clientName === "BET Africa"
-                      ? "/BET.jpg"
-                      : activeCategory.clientName === "MTV Base"
-                        ? "/mtvtheme.png"
-                        : currentMedia.image
+                    currentMedia.alt === "MTV Base Day"
+                      ? "/mtvv.png"
+                      : currentMedia.image
                   }
                   alt={currentMedia.alt}
-                  className="object-cover w-full h-full absolute inset-0"
+                  className={`object-cover w-full h-full absolute inset-0 ${currentMedia.image === "/falz.jpeg" || currentMedia.image === "/ayomaff.jpeg" ? "object-top" : ""
+                    }`}
                 />
 
-                {/* --- 1. Top Progress Bars (Story Style) --- */}
                 {hasMultiple && (
                   <div className="absolute top-4 left-0 w-full px-4 flex gap-1 z-20">
                     {activeCategory.media.map((_, idx) => (

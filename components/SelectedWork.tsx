@@ -22,8 +22,8 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
     () => [
       {
         id: 105,
-        title: "Unleashing the Nigerian Music Magic!",
-        tag: "Trending Naija Hits",
+        title: "Simi: Nigerian Music Magic!",
+        tag: "Official Naija Top 10",
         youtubeId: "xAbfBR1BP58",
         imageSrc: "/simi.jpg",
         videoUrl: ""
@@ -41,7 +41,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         title: "MTV Base Day",
         tag: "Brand & Business",
         youtubeId: "p6SNNvxyO9A",
-        imageSrc: "https://img.youtube.com/vi/p6SNNvxyO9A/maxresdefault.jpg",
+        imageSrc: "/mtvv.png",
         videoUrl: ""
       },
       {
@@ -97,7 +97,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
       },
       {
         id: 401,
-        title: "How to Invest ₦10,000,000 (N10M) in Nigeria (2026) | Step-by-Step (Stocks, ETFs, REITs)",
+        title: "How to Invest ₦10M in Nigeria",
         tag: "Narrative & Creative",
         youtubeId: "pj5BIlBwqyo",
         imageSrc: "https://img.youtube.com/vi/pj5BIlBwqyo/maxresdefault.jpg",
@@ -112,6 +112,136 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         imageSrc: "/dr.ndukka.jpeg",
         videoUrl: ""
       },
+      // --- Missing BET & MTV Videos from Showcase ---
+      {
+        id: 501,
+        title: "BET STREETS EP 3",
+        tag: "Brand & Business",
+        youtubeId: "ntivrziRSaQ",
+        imageSrc: "https://img.youtube.com/vi/ntivrziRSaQ/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 502,
+        title: "BET Promo",
+        tag: "Brand & Business",
+        youtubeId: "od5f8JlCcGw",
+        imageSrc: "https://img.youtube.com/vi/od5f8JlCcGw/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 503,
+        title: "Word on the street promo MTV base",
+        tag: "Brand & Business",
+        youtubeId: "DcE4N1s3c3w",
+        imageSrc: "https://img.youtube.com/vi/DcE4N1s3c3w/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 504,
+        title: "Mtv base REGAL Client preview",
+        tag: "Brand & Business",
+        youtubeId: "Q_--2nOhZTY",
+        imageSrc: "https://img.youtube.com/vi/Q_--2nOhZTY/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 505,
+        title: "Jaywise freestyle",
+        tag: "Narrative & Creative",
+        youtubeId: "T1yODW74kCg",
+        imageSrc: "https://img.youtube.com/vi/T1yODW74kCg/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 506,
+        title: "itel RS4 City Tour MTV",
+        tag: "Brand & Business",
+        youtubeId: "AFBeLzFN1Ns",
+        imageSrc: "https://img.youtube.com/vi/AFBeLzFN1Ns/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 507,
+        title: "Drop Some Bars?",
+        tag: "Narrative & Creative",
+        youtubeId: "TZC65EthMvc",
+        imageSrc: "https://img.youtube.com/vi/TZC65EthMvc/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 508,
+        title: "\"Plutorians\" take up the No. 1 Spot!",
+        tag: "Narrative & Creative",
+        youtubeId: "R5YCgcwN2A8",
+        imageSrc: "https://img.youtube.com/vi/R5YCgcwN2A8/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 509,
+        title: "Pheelz Gets Candid",
+        tag: "Official Naija Top 10",
+        youtubeId: "XFVf3aF7PQQ",
+        imageSrc: "/pheelz.webp",
+        videoUrl: ""
+      },
+      {
+        id: 510,
+        title: "Esta Blish! With Director Pink",
+        tag: "Narrative & Creative",
+        youtubeId: "kLX9X8xSG2g",
+        imageSrc: "/establish.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 511,
+        title: "BKAY",
+        tag: "Brand & Business",
+        youtubeId: "YLEPoHbkK6A",
+        imageSrc: "https://img.youtube.com/vi/YLEPoHbkK6A/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 512,
+        title: "County Kuti Freestyle",
+        tag: "Brand & Business",
+        youtubeId: "yeDausrMouU",
+        imageSrc: "https://img.youtube.com/vi/yeDausrMouU/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 513,
+        title: "Daddy Luwa Freestyle",
+        tag: "Brand & Business",
+        youtubeId: "S06LX0HzzhA",
+        imageSrc: "https://img.youtube.com/vi/S06LX0HzzhA/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 514,
+        title: "Get To Know Oluchi",
+        tag: "Brand & Business",
+        youtubeId: "Ovrzc1jKW8s",
+        imageSrc: "https://img.youtube.com/vi/Ovrzc1jKW8s/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 515,
+        title: "Nasboi in the Building!",
+        tag: "Official Naija Top 10",
+        youtubeId: "p3TiRl1F6nI",
+        imageSrc: "/nasboi.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 516,
+        title: "Top 10 Street Anthems",
+        tag: "Brand & Business",
+        youtubeId: "idvkRx5ZpH8",
+        imageSrc: "/pheelz.jpg",
+        videoUrl: ""
+      },
+      // ------------------------------------------------
       {
         id: 5,
         title: "Get to Know Zhus",
@@ -126,7 +256,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         title: "ONTT: Shoday",
         tag: "ONTT",
         videoUrl: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494186/ontt_shoday_wd9uj0.mp4",
-        imageSrc: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494186/ontt_shoday_wd9uj0.jpg",
+        imageSrc: "/shoday.jpeg",
         youtubeId: ""
       },
       // --- Mixed ONTT Project ---
@@ -161,7 +291,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         title: "ONTT: Falz",
         tag: "ONTT",
         videoUrl: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494084/ontt_falz_gz4glb.mp4",
-        imageSrc: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494084/ontt_falz_gz4glb.jpg",
+        imageSrc: "/falz.jpeg",
         youtubeId: ""
       },
       {
@@ -211,7 +341,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         title: "ONTT: Ayo Maff",
         tag: "ONTT",
         videoUrl: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771493648/ontt_ayo_maff_meqhny.mp4",
-        imageSrc: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771493648/ontt_ayo_maff_meqhny.jpg",
+        imageSrc: "/ayomaff.jpeg",
         youtubeId: ""
       },
       {
@@ -273,6 +403,12 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
                 title={project.title}
                 tag={project.tag}
                 imageSrc={project.imageSrc}
+                imageClassName={
+                  project.imageSrc === "/falz.jpeg" ||
+                    project.imageSrc === "/ayomaff.jpeg"
+                    ? "object-top"
+                    : ""
+                }
               // Pass the preview source to VideoCard for the hover effect
               />
             </div>

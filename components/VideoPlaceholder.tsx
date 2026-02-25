@@ -48,7 +48,7 @@ const VideoPlaceholder = () => {
               </div>
             </div>
 
-            {/* Quality Hint */}
+
             <div className="overflow-hidden h-0 group-hover:h-auto opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100 ease-out">
               <p className="text-white/80 font-switzer text-xs md:text-sm tracking-[0.2em] font-light uppercase bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
                 Set quality to 4K for best experience
