@@ -10,7 +10,7 @@ import { Button } from "./ui/button";
 const details = [
   { num: "03+", label: "years of experience" },
   { num: "20M+", label: "organic views garnered" },
-  { num: "590", label: "Completed projects" },
+  { num: "350", label: "Completed projects" },
   { num: "20+", label: "Happy Clients" },
 ];
 
