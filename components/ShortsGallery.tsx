@@ -8,18 +8,19 @@ import SectionHeading from "./ui/SectionHeading";
 import VideoModal from "./ui/VideoModal";
 
 const shorts = [
-    { id: "jCsc_RB0hU0", title: "Short 1" },
-    { id: "yU20ao4xSRs", title: "Short 2" },
-    { id: "PxcIdtZtIkI", title: "Short 3" },
-    { id: "NFT1DyYJP8w", title: "Short 4" },
-    { id: "Obq-TXPir3I", title: "Short 5" },
-    { id: "ruWceVEyntM", title: "Short 6" },
-    { id: "64D2KXmkCPU", title: "Short 7" },
-    { id: "9wBbD4l8Dlc", title: "Short 8" },
-    { id: "R_YGBF6IQ7Y", title: "Short 9" },
-    { id: "zd2wRjLqJVU", title: "Short 10" },
-    { id: "a2xcoPUhW3Q", title: "Short 11" },
-    { id: "f-a8tDeAZ5Y", title: "Short 12" },
+    // New Shorts
+    { id: "9CZCCC7V96E", title: "Short 1" },
+    { id: "f9s2oSSgSm0", title: "Short 2" },
+    { id: "Ei2EFfZkN0o", title: "Short 4" },
+    { id: "LvzVwihltO0", title: "Short 5" },
+    // Original Shorts
+    { id: "jCsc_RB0hU0", title: "Short 6" },
+    { id: "ruWceVEyntM", title: "Short 11" },
+    { id: "64D2KXmkCPU", title: "Short 12" },
+    { id: "9wBbD4l8Dlc", title: "Short 13" },
+    { id: "R_YGBF6IQ7Y", title: "Short 14" },
+    { id: "zd2wRjLqJVU", title: "Short 15" },
+    { id: "f-a8tDeAZ5Y", title: "Short 17" },
 ];
 
 const ShortsGallery = () => {
@@ -34,12 +35,12 @@ const ShortsGallery = () => {
                     className="md:max-w-[800px] mt-3 mb-10 text-center mx-auto"
                 />
 
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-px md:gap-0.5">
                     {shorts.map((short) => (
                         <div
                             key={short.id}
                             onClick={() => setSelectedVideoId(short.id)}
-                            className="group relative w-full aspect-9/16 bg-neutral-900 rounded-xl overflow-hidden cursor-pointer border border-white/10 hover:border-white/30 transition-all"
+                            className="group relative w-full aspect-9/16 bg-neutral-900 overflow-hidden cursor-pointer hover:opacity-90 transition-all"
                         >
                             {/* Thumbnail */}
                             {/* 
@@ -48,7 +49,7 @@ const ShortsGallery = () => {
                  effectively cropping out the side black bars and showing the video content.
               */}
                             <Image
-                                src={`https://img.youtube.com/vi/${short.id}/maxresdefault.jpg`}
+                                src={`https://img.youtube.com/vi/${short.id}/hqdefault.jpg`}
                                 alt={short.title}
                                 fill
                                 className="object-cover transition-transform duration-500 group-hover:scale-105"

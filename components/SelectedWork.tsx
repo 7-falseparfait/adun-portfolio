@@ -21,6 +21,39 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
   const projects = useMemo(
     () => [
       {
+        id: 105,
+        title: "Unleashing the Nigerian Music Magic!",
+        tag: "Trending Naija Hits",
+        youtubeId: "xAbfBR1BP58",
+        imageSrc: "/simi.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 15,
+        title: "Touching Base: Nasty C",
+        tag: "Brand & Business",
+        youtubeId: "-nvTOwR5w6s",
+        imageSrc: "https://img.youtube.com/vi/-nvTOwR5w6s/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 8,
+        title: "MTV Base Day",
+        tag: "Brand & Business",
+        youtubeId: "p6SNNvxyO9A",
+        imageSrc: "https://img.youtube.com/vi/p6SNNvxyO9A/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 202,
+        title: "Thrive Not Survive: Adora",
+        tag: "Thrive Not Survive",
+        youtubeId: "6u2eDcE9k7k",
+        imageSrc: "/adora.jpg",
+        videoUrl: ""
+      },
+      // --- Rest of Projects ---
+      {
         id: 1,
         title: "Falz Listening Party",
         tag: "Event & Lifestyle",
@@ -60,6 +93,14 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "Jmm8uLhxpPI",
         imageSrc: "https://img.youtube.com/vi/Jmm8uLhxpPI/maxresdefault.jpg",
+        videoUrl: ""
+      },
+      {
+        id: 401,
+        title: "How to Invest ₦10,000,000 (N10M) in Nigeria (2026) | Step-by-Step (Stocks, ETFs, REITs)",
+        tag: "Narrative & Creative",
+        youtubeId: "pj5BIlBwqyo",
+        imageSrc: "https://img.youtube.com/vi/pj5BIlBwqyo/maxresdefault.jpg",
         videoUrl: ""
       },
       // --- TNTS Project ---
@@ -105,23 +146,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         imageSrc: "https://img.youtube.com/vi/8_xqRnE7Ot0/maxresdefault.jpg",
         videoUrl: ""
       },
-      // --- TNTS Project ---
-      {
-        id: 202,
-        title: "Thrive Not Survive: Adora",
-        tag: "Thrive Not Survive",
-        youtubeId: "6u2eDcE9k7k",
-        imageSrc: "/adora.jpg",
-        videoUrl: ""
-      },
-      {
-        id: 8,
-        title: "MTV Base Day",
-        tag: "Brand & Business",
-        youtubeId: "p6SNNvxyO9A",
-        imageSrc: "https://img.youtube.com/vi/p6SNNvxyO9A/maxresdefault.jpg",
-        videoUrl: ""
-      },
+      // Moved to top
       {
         id: 9,
         title: "BET Streetz Ghana",
@@ -163,7 +188,15 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         imageSrc: "https://img.youtube.com/vi/gvKw2sI5L7E/maxresdefault.jpg",
         videoUrl: ""
       },
-      // --- OFI Project ---
+      // --- OFI Projects ---
+      {
+        id: 302,
+        title: "OFI: Human Trafficking",
+        tag: "Brand & Business",
+        youtubeId: "QZX3SNp5TRo",
+        imageSrc: "https://img.youtube.com/vi/QZX3SNp5TRo/maxresdefault.jpg",
+        videoUrl: ""
+      },
       {
         id: 301,
         title: "OFI: Make Your Vision Real",
@@ -197,14 +230,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         imageSrc: "https://img.youtube.com/vi/EvCt4WrW-0c/maxresdefault.jpg",
         videoUrl: ""
       },
-      {
-        id: 15,
-        title: "Touching Base: Nasty C",
-        tag: "Brand & Business",
-        youtubeId: "-nvTOwR5w6s",
-        imageSrc: "https://img.youtube.com/vi/-nvTOwR5w6s/maxresdefault.jpg",
-        videoUrl: ""
-      },
+      // Moved to top
     ],
     [],
   );

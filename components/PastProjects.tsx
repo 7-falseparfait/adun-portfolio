@@ -20,6 +20,16 @@ const projects = [
         image: "https://img.youtube.com/vi/Dhj-E4Co6yo/maxresdefault.jpg",
         alt: "BET Streetz Ghana",
       },
+      {
+        id: 2,
+        image: "https://img.youtube.com/vi/ntivrziRSaQ/maxresdefault.jpg",
+        alt: "BET STREETS EP 3",
+      },
+      {
+        id: 3,
+        image: "https://img.youtube.com/vi/od5f8JlCcGw/maxresdefault.jpg",
+        alt: "BET Promo",
+      },
     ],
   },
   {
@@ -52,6 +62,51 @@ const projects = [
         id: 5,
         image: "https://img.youtube.com/vi/p6SNNvxyO9A/maxresdefault.jpg",
         alt: "MTV Base Day",
+      },
+      {
+        id: 6,
+        image: "https://img.youtube.com/vi/DcE4N1s3c3w/maxresdefault.jpg",
+        alt: "Word on the street promo MTV base",
+      },
+      {
+        id: 7,
+        image: "https://img.youtube.com/vi/Q_--2nOhZTY/maxresdefault.jpg",
+        alt: "Mtv base REGAL Client preview",
+      },
+      {
+        id: 8,
+        image: "https://img.youtube.com/vi/T1yODW74kCg/maxresdefault.jpg",
+        alt: "JAywise freestyle",
+      },
+      {
+        id: 9,
+        image: "https://img.youtube.com/vi/AFBeLzFN1Ns/maxresdefault.jpg",
+        alt: "itel RS4 City Tour MTV",
+      },
+      {
+        id: 10,
+        image: "https://img.youtube.com/vi/TZC65EthMvc/maxresdefault.jpg",
+        alt: "Do you have what it takes to drop some bars?",
+      },
+      {
+        id: 11,
+        image: "https://img.youtube.com/vi/R5YCgcwN2A8/maxresdefault.jpg",
+        alt: "\"Plutorians\" take up the No. 1 Spot!",
+      },
+      {
+        id: 12,
+        image: "https://img.youtube.com/vi/XFVf3aF7PQQ/maxresdefault.jpg",
+        alt: "Pheelz gets candid with Culture Member Ilo",
+      },
+      {
+        id: 13,
+        image: "https://img.youtube.com/vi/kLX9X8xSG2g/maxresdefault.jpg",
+        alt: "Esta Blish! Its Director Pink in Da Building!!!",
+      },
+      {
+        id: 14,
+        image: "https://img.youtube.com/vi/xAbfBR1BP58/maxresdefault.jpg",
+        alt: "Simi: Unleashing the Nigerian Music Magic!",
       },
     ],
   },

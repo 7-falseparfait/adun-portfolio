@@ -9,9 +9,9 @@ import { Button } from "./ui/button";
 
 const details = [
   { num: "03+", label: "years of experience" },
-  { num: "40M+", label: "organic views garnered" },
+  { num: "20M+", label: "organic views garnered" },
   { num: "590", label: "Completed projects" },
-  { num: "15", label: "Happy Clients" },
+  { num: "20+", label: "Happy Clients" },
 ];
 
 const tools = [

@@ -11,8 +11,6 @@ const carouselImages = [
     { src: "/adun-5.png", alt: "Adun 5" },
     { src: "/carousel-photo1.webp", alt: "Photo 1" },
     { src: "/carousel-photo2.webp", alt: "Photo 2" },
-    { src: "/carousel-photo3.webp", alt: "Photo 3" },
-    { src: "/carousel-photo4.webp", alt: "Photo 4" },
     { src: "/carousel-photo5.webp", alt: "Photo 5" },
     { src: "/carousel-photo6.webp", alt: "Photo 6" },
     { src: "/carousel-photo7.webp", alt: "Photo 7" },
@@ -21,13 +19,13 @@ const carouselImages = [
 export default function PhotoCarousel() {
     // Duplicate images to create a seamless loop for the marquee
     const allImages = [...carouselImages, ...carouselImages];
-    // Total items: 12 * 2 = 24
+    // Total items: 10 * 2 = 20
 
     return (
         <div className="relative w-full overflow-hidden border border-white/10 mb-16">
             {/* 
                 Width Calculation:
-                Mobile (2 items visible): Total Items * 50% = 12 * 50% = 600% for one set. 
+                Mobile (2 items visible): Total Items * 50% = 10 * 50% = 500% for one set. 
                 Wait, previous logic:
                 Atomic Item Width = 100% / Total Items (container relative)
                 Screen Width = 100% (viewport)
@@ -38,17 +36,17 @@ export default function PhotoCarousel() {
                 Container Width (Mobile) = Total Items * 50vw
                 Container Width (Desktop) = Total Items * 25vw
 
-                Total Items in 'allImages' = 24.
+                Total Items in 'allImages' = 20.
                 
-                Mobile Container Width: 24 * 50% = 1200%
-                Desktop Container Width: 24 * 25% = 600%
+                Mobile Container Width: 20 * 50% = 1000%
+                Desktop Container Width: 20 * 25% = 500%
             */}
-            <div className="flex animate-scroll w-[1200%] md:w-[600%]">
+            <div className="flex animate-scroll hover:paused w-[1000%] md:w-[500%]">
                 {allImages.map((image, index) => (
                     <div
                         key={`${image.src}-${index}`}
-                        // Width for 24 items: 100% / 24
-                        className="relative flex-none w-[calc(100%/24)] aspect-[300/464] overflow-hidden"
+                        // Width for 20 items: 100% / 20
+                        className="relative flex-none w-[calc(100%/20)] aspect-[300/464] overflow-hidden"
                     >
                         <Image
                             src={image.src}

@@ -21,13 +21,9 @@ const Hero = () => {
           <h1 className="relative z-10 w-full max-w-[958px] font-[family-name:var(--font-crimson)] font-normal text-[32px] leading-[38px] md:text-[64px] md:leading-[80px] tracking-[-0.015em] text-center text-foreground">
             Hello, I am Muyiwa Aina, a Video <br className="hidden md:block" />
             Editor and Content Creator with over{" "}
-            <br className="hidden md:block" />5 years of experience.
+            <br className="hidden md:block" />3 years of experience.
           </h1>
         </div>
-
-        <p className="text-[#B3B3B3] text-center mt-4 text-base font-[family-name:var(--font-switzer)]">
-          Previously, I led video editing at AGR...a PR agency.
-        </p>
 
         <SocialLinks />
         <VideoPlaceholder />
