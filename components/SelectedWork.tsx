@@ -26,7 +26,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Official Naija Top 10",
         youtubeId: "xAbfBR1BP58",
         imageSrc: "/simi.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 15,
@@ -34,7 +34,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "-nvTOwR5w6s",
         imageSrc: "https://img.youtube.com/vi/-nvTOwR5w6s/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 8,
@@ -42,7 +42,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "p6SNNvxyO9A",
         imageSrc: "/mtvv.png",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 202,
@@ -50,7 +50,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Thrive Not Survive",
         youtubeId: "6u2eDcE9k7k",
         imageSrc: "/adora.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // --- Rest of Projects ---
       {
@@ -59,7 +59,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Event & Lifestyle",
         youtubeId: "2gvId6ITWEg",
         imageSrc: "https://img.youtube.com/vi/2gvId6ITWEg/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 2,
@@ -67,7 +67,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Event & Lifestyle",
         youtubeId: "O-mgaVsCj8Q",
         imageSrc: "https://img.youtube.com/vi/O-mgaVsCj8Q/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 3,
@@ -75,7 +75,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Event & Lifestyle",
         youtubeId: "_imURVADzLM",
         imageSrc: "https://img.youtube.com/vi/_imURVADzLM/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // --- Mixed ONTT Project ---
       // --- Swapped Joeboy to 4th pos ---
@@ -85,7 +85,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Event & Lifestyle",
         youtubeId: "qqYQHrXm_zE",
         imageSrc: "https://img.youtube.com/vi/qqYQHrXm_zE/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 4,
@@ -93,7 +93,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "Jmm8uLhxpPI",
         imageSrc: "https://img.youtube.com/vi/Jmm8uLhxpPI/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 401,
@@ -101,7 +101,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "pj5BIlBwqyo",
         imageSrc: "https://img.youtube.com/vi/pj5BIlBwqyo/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // --- TNTS Project ---
       {
@@ -110,7 +110,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Thrive Not Survive",
         youtubeId: "aFDiwhBwmHM",
         imageSrc: "/dr.ndukka.jpeg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // --- Missing BET & MTV Videos from Showcase ---
       {
@@ -119,7 +119,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "ntivrziRSaQ",
         imageSrc: "https://img.youtube.com/vi/ntivrziRSaQ/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 502,
@@ -127,7 +127,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "od5f8JlCcGw",
         imageSrc: "https://img.youtube.com/vi/od5f8JlCcGw/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 503,
@@ -135,15 +135,15 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "DcE4N1s3c3w",
         imageSrc: "https://img.youtube.com/vi/DcE4N1s3c3w/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 504,
-        title: "Mtv base REGAL Client preview",
+        title: "MTV Base REGAL",
         tag: "Brand & Business",
         youtubeId: "Q_--2nOhZTY",
         imageSrc: "https://img.youtube.com/vi/Q_--2nOhZTY/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 505,
@@ -151,7 +151,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "T1yODW74kCg",
         imageSrc: "https://img.youtube.com/vi/T1yODW74kCg/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 506,
@@ -159,7 +159,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "AFBeLzFN1Ns",
         imageSrc: "https://img.youtube.com/vi/AFBeLzFN1Ns/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 507,
@@ -167,15 +167,15 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "TZC65EthMvc",
         imageSrc: "https://img.youtube.com/vi/TZC65EthMvc/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 508,
-        title: "\"Plutorians\" take up the No. 1 Spot!",
+        title: '"Plutorians" take up the No. 1 Spot!',
         tag: "Narrative & Creative",
         youtubeId: "R5YCgcwN2A8",
         imageSrc: "https://img.youtube.com/vi/R5YCgcwN2A8/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 509,
@@ -183,7 +183,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Official Naija Top 10",
         youtubeId: "XFVf3aF7PQQ",
         imageSrc: "/pheelz.webp",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 510,
@@ -191,7 +191,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "kLX9X8xSG2g",
         imageSrc: "/establish.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 511,
@@ -199,7 +199,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "YLEPoHbkK6A",
         imageSrc: "https://img.youtube.com/vi/YLEPoHbkK6A/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 512,
@@ -207,7 +207,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "yeDausrMouU",
         imageSrc: "https://img.youtube.com/vi/yeDausrMouU/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 513,
@@ -215,7 +215,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "S06LX0HzzhA",
         imageSrc: "https://img.youtube.com/vi/S06LX0HzzhA/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 514,
@@ -223,7 +223,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "Ovrzc1jKW8s",
         imageSrc: "https://img.youtube.com/vi/Ovrzc1jKW8s/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 515,
@@ -231,7 +231,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Official Naija Top 10",
         youtubeId: "p3TiRl1F6nI",
         imageSrc: "/nasboi.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 516,
@@ -239,7 +239,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "idvkRx5ZpH8",
         imageSrc: "/pheelz.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // ------------------------------------------------
       {
@@ -248,25 +248,28 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "dK3zizZbIeE",
         imageSrc: "https://img.youtube.com/vi/dK3zizZbIeE/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // --- Swapped ONTT down ---
       {
         id: 101,
         title: "ONTT: Shoday",
         tag: "ONTT",
-        videoUrl: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494186/ontt_shoday_wd9uj0.mp4",
+        videoUrl:
+          "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494186/ontt_shoday_wd9uj0.mp4",
         imageSrc: "/shoday.jpeg",
-        youtubeId: ""
+        youtubeId: "",
       },
       // --- Mixed ONTT Project ---
       {
         id: 102,
         title: "ONTT: Djames",
         tag: "ONTT",
-        videoUrl: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494088/ontt_djames_s6e25e.mp4",
-        imageSrc: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494088/ontt_djames_s6e25e.jpg",
-        youtubeId: ""
+        videoUrl:
+          "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494088/ontt_djames_s6e25e.mp4",
+        imageSrc:
+          "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494088/ontt_djames_s6e25e.jpg",
+        youtubeId: "",
       },
       {
         id: 7,
@@ -274,7 +277,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Event & Lifestyle",
         youtubeId: "8_xqRnE7Ot0",
         imageSrc: "https://img.youtube.com/vi/8_xqRnE7Ot0/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // Moved to top
       {
@@ -283,16 +286,17 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "Dhj-E4Co6yo",
         imageSrc: "https://img.youtube.com/vi/Dhj-E4Co6yo/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // --- Mixed ONTT Project ---
       {
         id: 103,
         title: "ONTT: Falz",
         tag: "ONTT",
-        videoUrl: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494084/ontt_falz_gz4glb.mp4",
+        videoUrl:
+          "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771494084/ontt_falz_gz4glb.mp4",
         imageSrc: "/falz.jpeg",
-        youtubeId: ""
+        youtubeId: "",
       },
       {
         id: 10,
@@ -300,7 +304,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "vVlEiRs_e0E",
         imageSrc: "https://img.youtube.com/vi/vVlEiRs_e0E/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 11,
@@ -308,7 +312,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Event & Lifestyle",
         youtubeId: "6rUWHv5SOnM",
         imageSrc: "https://img.youtube.com/vi/6rUWHv5SOnM/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 12,
@@ -316,7 +320,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Narrative & Creative",
         youtubeId: "gvKw2sI5L7E",
         imageSrc: "https://img.youtube.com/vi/gvKw2sI5L7E/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // --- OFI Projects ---
       {
@@ -325,7 +329,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "QZX3SNp5TRo",
         imageSrc: "https://img.youtube.com/vi/QZX3SNp5TRo/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 301,
@@ -333,16 +337,17 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "PUu5D0Z_cqw",
         imageSrc: "https://img.youtube.com/vi/PUu5D0Z_cqw/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // --- Mixed ONTT Project ---
       {
         id: 104,
         title: "ONTT: Ayo Maff",
         tag: "ONTT",
-        videoUrl: "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771493648/ontt_ayo_maff_meqhny.mp4",
+        videoUrl:
+          "https://res.cloudinary.com/dzzwxwttf/video/upload/v1771493648/ontt_ayo_maff_meqhny.mp4",
         imageSrc: "/ayomaff.jpeg",
-        youtubeId: ""
+        youtubeId: "",
       },
       {
         id: 13,
@@ -350,7 +355,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Brand & Business",
         youtubeId: "tyh07ygYnIs",
         imageSrc: "https://img.youtube.com/vi/tyh07ygYnIs/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       {
         id: 14,
@@ -358,7 +363,7 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
         tag: "Event & Lifestyle",
         youtubeId: "EvCt4WrW-0c",
         imageSrc: "https://img.youtube.com/vi/EvCt4WrW-0c/maxresdefault.jpg",
-        videoUrl: ""
+        videoUrl: "",
       },
       // Moved to top
     ],
@@ -405,11 +410,11 @@ const SelectedWork = ({ showFilters = false }: SelectedWorkProps) => {
                 imageSrc={project.imageSrc}
                 imageClassName={
                   project.imageSrc === "/falz.jpeg" ||
-                    project.imageSrc === "/ayomaff.jpeg"
+                  project.imageSrc === "/ayomaff.jpeg"
                     ? "object-top"
                     : ""
                 }
-              // Pass the preview source to VideoCard for the hover effect
+                // Pass the preview source to VideoCard for the hover effect
               />
             </div>
           ))}
